@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عظمة وجلال مصر</title>
+<!--
+  ============================================================
+  © 2026 Anas Ghareeb Maher — All Rights Reserved
+  جميع الحقوق محفوظة لأنس غريب ماهر
+  egypt-glory-v1 | Unauthorized copying is prohibited.
+  Contact: anasghareeb999@gmail.com
+  ============================================================
+-->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #F0D080;
+  --gold-dark: #8B6914;
+  --sand: #F5E6C8;
+  --deep: #1A0A00;
+  --nile: #1B4F72;
+  --nile-light: #5DADE2;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Amiri', serif; background: var(--deep); color: var(--sand); overflow-x: hidden; user-select: none; -webkit-user-select: none; }
+
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; overflow: hidden; padding: 2rem;
+  background: radial-gradient(ellipse at 50% 80%, #3D1C02 0%, #1A0A00 60%);
+}
+.hero::before {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 220px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220'%3E%3Cpolygon points='0,220 600,30 1200,220' fill='%23C9A84C' opacity='0.15'/%3E%3Cpolygon points='0,220 300,80 600,220' fill='%23C9A84C' opacity='0.1'/%3E%3Cpolygon points='600,220 900,80 1200,220' fill='%23C9A84C' opacity='0.1'/%3E%3C/svg%3E") no-repeat bottom;
+  background-size: cover;
+}
+.stars {
+  position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(1px 1px at 10% 20%, #fff8, transparent),
+    radial-gradient(1px 1px at 30% 10%, #fff6, transparent),
+    radial-gradient(1px 1px at 50% 5%, #fff8, transparent),
+    radial-gradient(1px 1px at 70% 15%, #fff5, transparent),
+    radial-gradient(1px 1px at 85% 8%, #fff7, transparent),
+    radial-gradient(1px 1px at 20% 40%, #fff4, transparent),
+    radial-gradient(1px 1px at 60% 30%, #fff6, transparent),
+    radial-gradient(2px 2px at 15% 60%, rgba(201,168,76,0.4), transparent),
+    radial-gradient(2px 2px at 75% 55%, rgba(201,168,76,0.3), transparent);
+}
+.ankh-deco { font-size: 3rem; color: var(--gold); opacity: 0.5; letter-spacing: 2rem; margin-bottom: 1rem; animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+.hero-title {
+  font-family: 'Cinzel', serif; font-size: clamp(2.5rem,8vw,6rem); font-weight: 900; line-height: 1.1;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 0.5rem; animation: shimmer 3s ease-in-out infinite alternate;
+}
+@keyframes shimmer { from{filter:brightness(1)} to{filter:brightness(1.3)} }
+.hero-subtitle { font-size: clamp(1.2rem,3vw,2rem); color: var(--gold-light); opacity: 0.85; margin-bottom: 2.5rem; letter-spacing: 0.15em; }
+.divider { width: 200px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 1.5rem auto; }
+.nile-divider { background: linear-gradient(90deg, transparent, var(--nile-light), transparent); }
+.hero-quote { font-size: clamp(0.9rem,2vw,1.2rem); color: var(--sand); opacity: 0.7; max-width: 600px; line-height: 1.8; font-style: italic; }
+.scroll-down { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 2rem; color: var(--gold); opacity: 0.6; animation: bounce 2s infinite; }
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+nav { background: rgba(26,10,0,0.97); border-bottom: 1px solid var(--gold-dark); position: sticky; top: 0; z-index: 100; display: flex; justify-content: center; flex-wrap: wrap; padding: 0 1rem; }
+nav a { color: var(--gold-light); text-decoration: none; padding: 1rem 1.5rem; font-size: 1rem; letter-spacing: 0.05em; border-bottom: 2px solid transparent; transition: all 0.3s; }
+nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+
+section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.section-title { font-family: 'Cinzel', serif; font-size: clamp(1.8rem,4vw,3rem); color: var(--gold); text-align: center; margin-bottom: 0.5rem; }
+
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; margin-top: 3rem; }
+.card { background: rgba(201,168,76,0.05); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+.card:hover { transform: translateY(-6px); border-color: var(--gold); }
+.card-img { width: 100%; height: 180px; }
+.card-img svg { width: 100%; height: 100%; }
+.card-body { padding: 1.5rem; }
+.card-body h3 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.2rem; margin-bottom: 0.5rem; }
+.card-body p { color: var(--sand); opacity: 0.75; line-height: 1.7; font-size: 0.95rem; }
+
+.nile-strip { background: linear-gradient(135deg, #0B2F45, #1B4F72, #0B2F45); padding: 4rem 2rem; text-align: center; border-top: 1px solid rgba(93,173,226,0.3); border-bottom: 1px solid rgba(93,173,226,0.3); }
+.nile-strip h2 { font-family: 'Cinzel', serif; color: var(--nile-light); font-size: clamp(1.5rem,3vw,2.5rem); margin-bottom: 1rem; }
+.nile-strip p { color: #AED6F1; max-width: 700px; margin: 0 auto; line-height: 1.9; font-size: 1.05rem; }
+.nile-wave { font-size: 2.5rem; margin-bottom: 1rem; animation: wave 3s ease-in-out infinite; }
+@keyframes wave { 0%,100%{letter-spacing:0.1em} 50%{letter-spacing:0.4em} }
+
+.timeline { position: relative; padding: 2rem 0; margin-top: 3rem; }
+.timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg,transparent,var(--gold),transparent); transform: translateX(-50%); }
+.tl-item { display: flex; justify-content: flex-end; padding: 0 calc(50% + 2rem) 2rem 0; position: relative; }
+.tl-item:nth-child(even) { justify-content: flex-start; padding: 0 0 2rem calc(50% + 2rem); }
+.tl-item::after { content: ''; position: absolute; left: 50%; top: 1rem; width: 12px; height: 12px; background: var(--gold); border-radius: 50%; transform: translateX(-50%); box-shadow: 0 0 8px var(--gold); }
+.tl-card { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.2); border-radius: 4px; padding: 1rem 1.25rem; max-width: 320px; }
+.tl-card h4 { color: var(--gold); font-family: 'Cinzel', serif; font-size: 0.95rem; margin-bottom: 0.3rem; }
+.tl-card span { color: var(--gold-dark); font-size: 0.85rem; display: block; margin-bottom: 0.5rem; }
+.tl-card p { color: var(--sand); opacity: 0.7; font-size: 0.88rem; line-height: 1.6; }
+
+.gallery { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 3rem; }
+.gallery-item { aspect-ratio: 1; border: 1px solid rgba(201,168,76,0.2); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; background: rgba(201,168,76,0.04); transition: all 0.3s; position: relative; }
+.gallery-item:hover { border-color: var(--gold); background: rgba(201,168,76,0.1); transform: scale(1.03); }
+.gallery-item span { position: absolute; bottom: 0.5rem; left: 0; right: 0; text-align: center; font-size: 0.75rem; color: var(--gold); }
+
+.quote-section { text-align: center; padding: 5rem 2rem; background: linear-gradient(180deg,var(--deep) 0%,rgba(139,105,20,0.08) 50%,var(--deep) 100%); }
+blockquote { font-family: 'Amiri', serif; font-size: clamp(1.3rem,3vw,2rem); color: var(--gold-light); max-width: 800px; margin: 0 auto; line-height: 1.9; font-style: italic; }
+blockquote::before { content: '❝'; color: var(--gold-dark); font-size: 4rem; display: block; line-height: 0.5; margin-bottom: 1rem; }
+blockquote::after { content: '❞'; color: var(--gold-dark); font-size: 4rem; display: block; line-height: 0.5; margin-top: 1rem; }
+.quote-attr { color: var(--gold-dark); margin-top: 1.5rem; font-size: 0.9rem; }
+
+/* CONTACT */
+.contact-section { padding: 5rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1.5rem; margin-top: 3rem; }
+.contact-card { background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.25); border-radius: 6px; padding: 1.5rem 1rem; transition: all 0.3s; }
+.contact-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.1); transform: translateY(-4px); }
+.contact-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.contact-label { font-size: 0.8rem; color: var(--gold-dark); letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+.contact-value { color: var(--gold-light); font-size: 1rem; word-break: break-all; }
+.contact-value a { color: var(--gold-light); text-decoration: none; }
+.contact-value a:hover { color: var(--gold); text-decoration: underline; }
+
+footer { background: rgba(0,0,0,0.6); border-top: 1px solid var(--gold-dark); padding: 2rem; text-align: center; }
+footer p { color: var(--gold-dark); font-size: 0.9rem; }
+.egypt-flag {
+  width: 60px;
+  height: 40px;
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.flag-stripe {
+  flex: 1;
+}
+
+.red { background: #CE1126; }
+.white { 
+  background: #fff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eagle {
+  width: 18px;
+  height: auto;
+}
+.black { background: #000; }
+.footer-sub { margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.5; }
+.footer-copy { margin-top: 0.75rem; font-size: 0.78rem; opacity: 0.7; }
+
+#protection-overlay {
+  display: none; position: fixed; inset: 0; z-index: 99999;
+  background: #1A0A00; color: var(--gold);
+  flex-direction: column; align-items: center; justify-content: center; text-align: center;
+}
+#protection-overlay h2 { font-family: 'Cinzel', serif; font-size: 2rem; margin-bottom: 1rem; }
+#protection-overlay p { color: var(--sand); opacity: 0.7; max-width: 400px; line-height: 1.8; }
+
+@media (max-width:700px) {
+  .timeline::before { left: 1.5rem; }
+  .tl-item, .tl-item:nth-child(even) { justify-content: flex-start; padding: 0 0 2rem 3.5rem; }
+  .tl-item::after { left: 1.5rem; }
+  .gallery { grid-template-columns: repeat(2,1fr); }
+}
+</style>
+</head>
+<body>
+
+<div id="protection-overlay">
+  <div style="font-size:3rem;margin-bottom:1rem">☥</div>
+  <h2>محتوى محمي</h2>
+  <p>هذا الموقع محمي بحقوق الملكية الفكرية<br>© 2026 Anas Ghareeb Maher<br>جميع الحقوق محفوظة</p>
+</div>
+
+<div class="hero">
+  <div class="stars"></div>
+  <div class="ankh-deco">☥ ☥ ☥</div>
+  <h1 class="hero-title">EGYPT</h1>
+  <p class="hero-subtitle">عظمة وجلال حضارة خالدة</p>
+  <div class="divider"></div>
+  <p class="hero-quote">"من أراد أن يعرف الله، فليتأمل في مصر — فقد كشفت الأرض هنا عن أعماق روح الإنسان"</p>
+  <div class="scroll-down">⌄</div>
+</div>
+
+<nav>
+  <a href="#wonders">عجائب</a>
+  <a href="#nile">النيل</a>
+  <a href="#history">التاريخ</a>
+  <a href="#gallery">معرض</a>
+  <a href="#contact">تواصل</a>
+</nav>
+
+<section id="wonders">
+  <h2 class="section-title">عجائب مصر الخالدة</h2>
+  <div class="divider"></div>
+  <div class="cards-grid">
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(180deg,#2C1A00,#5C3A10)">
+        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="180" fill="#1A0E00"/>
+          <defs>
+            <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1C3050"/><stop offset="100%" stop-color="#6B4A1A"/></linearGradient>
+            <linearGradient id="sand1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C9A84C"/><stop offset="100%" stop-color="#8B6914"/></linearGradient>
+          </defs>
+          <rect width="300" height="130" fill="url(#sky1)"/>
+          <rect y="130" width="300" height="50" fill="#3D2A00"/>
+          <circle cx="240" cy="35" r="18" fill="#F0D080" opacity="0.9"/>
+          <circle cx="248" cy="30" r="13" fill="#1C3050"/>
+          <circle cx="50" cy="20" r="1.5" fill="#fff" opacity="0.8"/>
+          <circle cx="100" cy="35" r="1" fill="#fff" opacity="0.6"/>
+          <circle cx="160" cy="15" r="1.5" fill="#fff" opacity="0.9"/>
+          <polygon points="150,40 230,130 70,130" fill="url(#sand1)" opacity="0.9"/>
+          <polygon points="150,40 190,130 150,130" fill="#C9A84C" opacity="0.4"/>
+          <polygon points="55,80 90,130 20,130" fill="#A07820" opacity="0.7"/>
+          <polygon points="255,90 285,130 225,130" fill="#A07820" opacity="0.6"/>
+          <ellipse cx="100" cy="128" rx="25" ry="8" fill="#8B6914" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>أهرامات الجيزة</h3>
+        <p>عجيبة الدنيا الوحيدة الباقية — بُنيت قبل أكثر من 4500 عام وما زالت شاهدة على عبقرية الإنسان المصري.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(180deg,#0B2034,#1B4F72)">
+        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="180" fill="#0B1E2D"/>
+          <defs><linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0B2F45"/><stop offset="100%" stop-color="#1A6080"/></linearGradient></defs>
+          <rect width="300" height="120" fill="url(#sky2)"/>
+          <circle cx="150" cy="55" r="28" fill="#F0D080" opacity="0.9"/>
+          <circle cx="150" cy="55" r="20" fill="#F5C518"/>
+          <g stroke="#F0D080" stroke-width="1.5" opacity="0.5">
+            <line x1="150" y1="15" x2="150" y2="25"/><line x1="150" y1="85" x2="150" y2="95"/>
+            <line x1="110" y1="55" x2="120" y2="55"/><line x1="180" y1="55" x2="190" y2="55"/>
+          </g>
+          <rect x="30" y="100" width="12" height="50" fill="#C9A84C" rx="2"/>
+          <rect x="55" y="100" width="12" height="50" fill="#B8961E" rx="2"/>
+          <rect x="80" y="100" width="12" height="50" fill="#C9A84C" rx="2"/>
+          <rect x="200" y="100" width="12" height="50" fill="#C9A84C" rx="2"/>
+          <rect x="225" y="100" width="12" height="50" fill="#B8961E" rx="2"/>
+          <rect x="250" y="100" width="12" height="50" fill="#C9A84C" rx="2"/>
+          <rect x="100" y="80" width="100" height="70" fill="#8B6914" opacity="0.8"/>
+          <text x="138" y="122" fill="#F0D080" font-size="18" opacity="0.7">𓂀 𓆣</text>
+          <rect x="0" y="140" width="300" height="40" fill="#0D3A52" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>معبد الكرنك</h3>
+        <p>أضخم مجمع معبدي في العالم القديم — تحفة معمارية تحمل في جدرانها أسرار الحضارة الفرعونية.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img" style="background:linear-gradient(180deg,#1A0B0B,#4A1A1A)">
+        <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="180" fill="#12090A"/>
+          <defs>
+            <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A0B0B"/><stop offset="100%" stop-color="#6B2010"/></linearGradient>
+            <linearGradient id="cliff" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C9A84C"/><stop offset="100%" stop-color="#8B5E1A"/></linearGradient>
+          </defs>
+          <rect width="300" height="110" fill="url(#sky3)"/>
+          <rect x="0" y="90" width="300" height="90" fill="url(#cliff)"/>
+          <rect x="40" y="70" width="220" height="80" fill="#A07820" opacity="0.9" rx="2"/>
+          <g fill="#8B5E1A">
+            <ellipse cx="75" cy="80" rx="12" ry="14"/><rect x="65" y="90" width="20" height="40" rx="3"/>
+            <ellipse cx="120" cy="80" rx="12" ry="14"/><rect x="110" y="90" width="20" height="40" rx="3"/>
+            <ellipse cx="180" cy="80" rx="12" ry="14"/><rect x="170" y="90" width="20" height="40" rx="3"/>
+            <ellipse cx="225" cy="80" rx="12" ry="14"/><rect x="215" y="90" width="20" height="40" rx="3"/>
+          </g>
+          <g fill="#C9A84C" opacity="0.8">
+            <circle cx="75" cy="78" r="8"/><circle cx="120" cy="78" r="8"/>
+            <circle cx="180" cy="78" r="8"/><circle cx="225" cy="78" r="8"/>
+          </g>
+          <rect x="133" y="110" width="34" height="35" fill="#1A0900" rx="2"/>
+          <rect x="0" y="148" width="300" height="32" fill="#1B3A5C" opacity="0.7"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>أبو سمبل</h3>
+        <p>نُحت في الصخر على يد رمسيس الثاني — ويشهد كل عام ظاهرة تعامد الشمس في إبهار لا مثيل له.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="nile-strip" id="nile">
+  <div class="nile-wave">〰 〰 〰</div>
+  <h2>نهر النيل — شريان الحياة</h2>
+  <div class="divider nile-divider"></div>
+  <p>النيل أطول أنهار الأرض وهبة مصر الأولى — منحها الخصب والحياة عبر آلاف السنين. على ضفافه نشأت أعظم حضارة عرفها التاريخ، وفي مياهه تجلّت عظمة مصر وروحها الخالدة. من أعماق أفريقيا حتى مصبّه في البحر المتوسط، يمتد النيل ليروي قصة أمة لا تموت.</p>
+</div>
+
+<section id="history">
+  <h2 class="section-title">عبر الزمان</h2>
+  <div class="divider"></div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-card"><h4>توحيد مصر</h4><span>~3100 ق.م</span><p>وحّد الملك مينا القُطرين وأسّس أول دولة مركزية في التاريخ الإنساني.</p></div></div>
+    <div class="tl-item"><div class="tl-card"><h4>الدولة القديمة وعصر الأهرامات</h4><span>2686 – 2181 ق.م</span><p>شُيّدت أهرامات الجيزة في هذا العصر الذهبي ليُخلّد الفراعنة أنفسهم في الحجر.</p></div></div>
+    <div class="tl-item"><div class="tl-card"><h4>رمسيس الثاني — الفرعون العظيم</h4><span>1279 – 1213 ق.م</span><p>أطول فراعنة مصر حكماً وأعظمهم أثراً — ترك بصمته في معابد وأبنية لا تحصى.</p></div></div>
+    <div class="tl-item"><div class="tl-card"><h4>كليوباترا السابعة</h4><span>51 – 30 ق.م</span><p>آخر ملوك الفراعنة وأذكاهم — جمعت بين الجمال والذكاء وأتقنت تسع لغات.</p></div></div>
+    <div class="tl-item"><div class="tl-card"><h4>مصر الإسلامية</h4><span>641 م</span><p>دخل الإسلام مصر ليمنحها هوية جديدة أضافت للحضارة الإنسانية علماً وعمارة وفناً.</p></div></div>
+    <div class="tl-item"><div class="tl-card"><h4>ثورة 1952</h4><span>23 يوليو 1952</span><p>أعادت مصر سيادتها وانطلقت نحو عصر جديد من الاستقلال والكرامة الوطنية.</p></div></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">لمحات من مصر</h2>
+  <div class="divider"></div>
+  <div class="gallery">
+    <div class="gallery-item">𓂀<span>عين حورس</span></div>
+    <div class="gallery-item">𓆣<span>الجعران المقدس</span></div>
+    <div class="gallery-item">☥<span>رمز الحياة</span></div>
+    <div class="gallery-item">𓋴<span>الأفعى الكوبرا</span></div>
+    <div class="gallery-item">𓁹<span>رع — إله الشمس</span></div>
+    <div class="gallery-item">𓆙<span>الصقر الإلهي</span></div>
+  </div>
+</section>
+
+<div class="quote-section">
+  <blockquote>"مصر هي أمّ الدنيا — وفي رمالها تنام أسرار العالم"</blockquote>
+  <p class="quote-attr">— المقريزي</p>
+</div>
+
+<section id="contact">
+  <div class="contact-section">
+    <h2 class="section-title">تواصل معي</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-icon">👤</div>
+        <div class="contact-label">المصمم</div>
+        <div class="contact-value">Anas Ghareeb Maher</div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">تليفون</div>
+        <div class="contact-value"><a href="tel:01027309981">01027309981</a></div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-label">البريد الإلكتروني</div>
+        <div class="contact-value"><a href="mailto:anasghareeb999@gmail.com">anasghareeb999@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="egypt-flag">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg" style="width:60px; height:auto; border-radius:2px;">
+</div>
+  <p>جمهورية مصر العربية — أرض الحضارة والخلود</p>
+  <p class="footer-sub">☥ تحيا مصر ☥</p>
+  <p class="footer-copy">© 2026 Anas Ghareeb Maher — جميع الحقوق محفوظة | Unauthorized copying is prohibited.</p>
+</footer>
+
+<script>
+// © 2026 Anas Ghareeb Maher — egypt-glory-v1 | anasghareeb999@gmail.com
+
+// 1. منع الكليك اليميني
+document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
+
+// 2. منع اختصارات لوحة المفاتيح (F12, Ctrl+U, Ctrl+S, Ctrl+Shift+I/J/C)
+document.addEventListener('keydown', function(e) {
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey && ['U','S'].includes(e.key.toUpperCase()))
+  ) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// 3. منع تحديد النص
+document.addEventListener('selectstart', function(e) { e.preventDefault(); return false; });
+
+// 4. منع سحب العناصر
+document.addEventListener('dragstart', function(e) { e.preventDefault(); return false; });
+
+// 5. كشف DevTools وإظهار overlay الحماية
+(function() {
+  var overlay = document.getElementById('protection-overlay');
+  var threshold = 160;
+  setInterval(function() {
+    var w = window.outerWidth - window.innerWidth > threshold;
+    var h = window.outerHeight - window.innerHeight > threshold;
+    overlay.style.display = (w || h) ? 'flex' : 'none';
+  }, 500);
+})();
+
+// 6. Watermark مخفي في الـ Console
+(function() {
+  var s = 'color:#C9A84C;font-size:16px;font-weight:bold;background:#1A0A00;padding:8px 16px;border-radius:4px;';
+  console.log('%c☥ © 2026 Anas Ghareeb Maher ☥', s);
+  console.log('%cهذا الموقع محمي. النسخ غير المصرح به ممنوع تماماً.', 'color:#888;font-size:12px;');
+  console.log('%cللتواصل: anasghareeb999@gmail.com | 01027309981', 'color:#888;font-size:12px;');
+})();
+</script>
+</body>
+</html>
