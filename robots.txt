@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://egypt-glory.com/sitemap.xml
+Sitemap: https://anasghareeb999-sys.github.io/Egypt/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
