@@ -315,7 +315,20 @@ section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
 .achieve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; max-width: 1100px; margin: 3rem auto 0; }
 .achieve-item { text-align: center; padding: 1.5rem 1rem; border: 1px solid rgba(201,168,76,0.12); border-radius: 6px; transition: border-color 0.3s, background 0.3s; }
 .achieve-item:hover { border-color: rgba(201,168,76,0.4); background: rgba(201,168,76,0.05); }
-.achieve-icon { font-size: 2.8rem; display: block; margin-bottom: 0.8rem; }
+.achieve-icon { display: block; margin-bottom: 0.8rem; }
+.achieve-icon img { width: 72px; height: 72px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(201,168,76,0.35); display: block; margin: 0 auto; transition: transform 0.3s; }
+.achieve-item:hover .achieve-icon img { transform: scale(1.07); }
+.artifact-icon { display: block; margin-bottom: 0.6rem; }
+.artifact-icon img { width: 88px; height: 88px; object-fit: cover; border-radius: 8px; border: 2px solid rgba(201,168,76,0.35); display: block; margin: 0 auto; transition: transform 0.3s; }
+.artifact-card:hover .artifact-icon img { transform: scale(1.06); }
+.geo-icon { display: block; margin-bottom: 0.7rem; }
+.geo-icon img { width: 66px; height: 66px; object-fit: cover; border-radius: 50%; border: 2px solid rgba(93,173,226,0.45); display: block; margin: 0 auto; transition: transform 0.3s; }
+.geo-card:hover .geo-icon img { transform: scale(1.07); }
+.god-mini-sym { display: block; margin-bottom: 0.5rem; min-height: 3rem; }
+.god-mini-sym img { width: 72px; height: 72px; object-fit: cover; border-radius: 10px; border: 1px solid rgba(201,168,76,0.3); display: block; margin: 0 auto; transition: transform 0.3s; }
+.god-mini:hover .god-mini-sym img { transform: scale(1.07); }
+.contact-icon { margin-bottom: 0.75rem; }
+.contact-icon img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(201,168,76,0.3); display: block; margin: 0 auto; }
 .achieve-title { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1rem; margin-bottom: 0.5rem; }
 .achieve-text { color: var(--sand); opacity: 0.7; font-size: 0.87rem; line-height: 1.7; }
 
@@ -386,6 +399,82 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ─────────────── TEMPLES SECTION ─────────────── */
+.temples-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem; margin-top: 3rem; }
+.temple-card {
+  background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 6px; padding: 1.8rem 1.5rem; transition: all 0.3s; position: relative;
+}
+.temple-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+.temple-location { font-size: 0.75rem; color: var(--gold-dark); letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; }
+.temple-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.15rem; margin-bottom: 0.3rem; }
+.temple-period { font-size: 0.82rem; color: var(--nile-light); margin-bottom: 0.8rem; font-style: italic; }
+.temple-desc { color: var(--sand); opacity: 0.75; font-size: 0.9rem; line-height: 1.8; }
+.temple-deity { display: inline-block; margin-top: 0.8rem; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 3px; padding: 0.2rem 0.6rem; font-size: 0.78rem; color: var(--gold); }
+
+/* ─────────────── ARTIFACTS SECTION ─────────────── */
+.artifacts-section { background: linear-gradient(180deg, #0A0500 0%, #180A00 50%, #0A0500 100%); padding: 5rem 2rem; border-top: 1px solid rgba(201,168,76,0.1); }
+.artifacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.8rem; max-width: 1100px; margin: 3rem auto 0; }
+.artifact-card {
+  background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 6px; padding: 1.5rem; text-align: center; transition: all 0.3s;
+}
+.artifact-card:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); transform: translateY(-4px); }
+.artifact-icon { font-size: 3.5rem; display: block; margin-bottom: 0.8rem; }
+.artifact-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1rem; margin-bottom: 0.4rem; }
+.artifact-museum { font-size: 0.75rem; color: var(--nile-light); letter-spacing: 0.05em; margin-bottom: 0.6rem; display: block; }
+.artifact-desc { color: var(--sand); opacity: 0.7; font-size: 0.85rem; line-height: 1.7; }
+.artifact-date { font-size: 0.75rem; color: var(--gold-dark); margin-top: 0.5rem; display: block; }
+
+/* ─────────────── GEOGRAPHY SECTION ─────────────── */
+.geo-strip { background: linear-gradient(135deg, #031520 0%, #0B2F45 50%, #031520 100%); padding: 5rem 2rem; border-top: 1px solid rgba(93,173,226,0.2); border-bottom: 1px solid rgba(93,173,226,0.2); }
+.geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.5rem; max-width: 1100px; margin: 3rem auto 0; }
+.geo-card { background: rgba(27,79,114,0.25); border: 1px solid rgba(93,173,226,0.2); border-radius: 6px; padding: 1.5rem; transition: all 0.3s; text-align: center; }
+.geo-card:hover { border-color: var(--nile-light); background: rgba(27,79,114,0.4); }
+.geo-icon { font-size: 2.5rem; display: block; margin-bottom: 0.7rem; }
+.geo-title { font-family: 'Cinzel', serif; color: var(--nile-light); font-size: 1rem; margin-bottom: 0.5rem; }
+.geo-text { color: #AED6F1; font-size: 0.87rem; line-height: 1.7; opacity: 0.85; }
+
+/* ─────────────── EXTENDED GODS ─────────────── */
+.gods-extended { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 1.3rem; margin-top: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+.god-mini { background: rgba(201,168,76,0.03); border: 1px solid rgba(201,168,76,0.12); border-radius: 5px; padding: 1.2rem 0.8rem; text-align: center; transition: all 0.3s; }
+.god-mini:hover { border-color: var(--gold); background: rgba(201,168,76,0.07); }
+.god-mini-sym { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+.god-mini-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 0.95rem; margin-bottom: 0.25rem; }
+.god-mini-role { font-size: 0.72rem; color: var(--gold-dark); letter-spacing: 0.06em; margin-bottom: 0.5rem; }
+.god-mini-desc { color: var(--sand); opacity: 0.65; font-size: 0.8rem; line-height: 1.6; }
+
+/* ─────────────── EXTENDED HIERO ─────────────── */
+.hiero-alphabet { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px,1fr)); gap: 0.8rem; max-width: 1000px; margin: 2.5rem auto 0; }
+.hiero-letter { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.15); border-radius: 4px; padding: 0.8rem 0.5rem; text-align: center; transition: all 0.3s; }
+.hiero-letter:hover { border-color: var(--gold); background: rgba(201,168,76,0.09); }
+.hl-sym { font-size: 2.2rem; color: var(--gold-light); display: block; margin-bottom: 0.4rem; }
+.hl-ar { font-size: 0.9rem; color: var(--gold); font-weight: 700; display: block; margin-bottom: 0.2rem; }
+.hl-en { font-size: 0.72rem; color: var(--sand); opacity: 0.6; display: block; }
+.hl-name { font-size: 0.68rem; color: var(--gold-dark); display: block; margin-top: 0.2rem; }
+
+/* ─────────────── TABLE STYLE ─────────────── */
+.info-table { width: 100%; border-collapse: collapse; margin-top: 2rem; font-size: 0.9rem; }
+.info-table th { background: rgba(201,168,76,0.15); color: var(--gold); font-family: 'Cinzel', serif; padding: 0.8rem 1rem; border: 1px solid rgba(201,168,76,0.2); text-align: right; }
+.info-table td { padding: 0.7rem 1rem; border: 1px solid rgba(201,168,76,0.1); color: var(--sand); opacity: 0.8; vertical-align: top; line-height: 1.6; }
+.info-table tr:nth-child(even) td { background: rgba(201,168,76,0.03); }
+.info-table tr:hover td { background: rgba(201,168,76,0.06); }
+
+/* ─────────────── DYNASTIES TABLE ─────────────── */
+.dynasty-section { background: linear-gradient(180deg, var(--deep) 0%, #1A0A00 100%); padding: 5rem 2rem; }
+.dynasty-table-wrap { max-width: 1000px; margin: 2rem auto 0; overflow-x: auto; }
+
+/* ─────────────── KINGS EXTENDED ─────────────── */
+.kings-section { padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.kings-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+.king-card { background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.18); border-radius: 6px; padding: 1.4rem; transition: all 0.3s; border-top: 3px solid var(--gold-dark); }
+.king-card:hover { border-top-color: var(--gold); border-color: var(--gold); transform: translateY(-3px); }
+.king-dynasty { font-size: 0.7rem; color: var(--gold-dark); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.king-name { font-family: 'Cinzel', serif; color: var(--gold); font-size: 1.05rem; margin-bottom: 0.2rem; }
+.king-dates { font-size: 0.8rem; color: var(--nile-light); font-style: italic; margin-bottom: 0.6rem; }
+.king-note { color: var(--sand); opacity: 0.7; font-size: 0.85rem; line-height: 1.7; }
+
 </style>
 </head>
 <body>
@@ -443,9 +532,12 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
   <a href="#nile">النيل</a>
   <a href="#pharaohs">الفراعنة</a>
   <a href="#gods">الآلهة</a>
+  <a href="#temples">المعابد</a>
   <a href="#hieroglyphs">الهيروغليفية</a>
+  <a href="#artifacts">الآثار</a>
   <a href="#achievements">الإنجازات</a>
   <a href="#history">التاريخ</a>
+  <a href="#geography">الجغرافيا</a>
   <a href="#gallery">معرض</a>
   <a href="#contact">تواصل</a>
 </nav>
@@ -827,6 +919,42 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
       </ul>
     </div>
 
+    <div class="pharaoh-card reveal">
+      <span class="pharaoh-era">الأسرة الثامنة عشرة</span>
+      <div class="pharaoh-name">أخناتون</div>
+      <div class="pharaoh-reign">1353 – 1336 ق.م</div>
+      <p class="pharaoh-desc">الثائر الديني الأول في التاريخ — أعلن التوحيد ونصّب آتون إلهاً وحيداً وبنى مدينة أخيتاتون (تل العمارنة). زوجته نفرتيتي شريكة حكمه الحقيقية وأيقونة الجمال الخالد.</p>
+      <ul class="pharaoh-achievements">
+        <li>أول ثورة دينية توحيدية في تاريخ البشرية</li>
+        <li>نشيد آتون أول قصيدة غنائية عاطفية في التاريخ</li>
+        <li>تأسيس مدرسة فنية واقعية ثورية جديدة</li>
+      </ul>
+    </div>
+
+    <div class="pharaoh-card reveal reveal-delay-1">
+      <span class="pharaoh-era">الأسرة الثامنة عشرة</span>
+      <div class="pharaoh-name">حتشبسوت</div>
+      <div class="pharaoh-reign">1479 – 1458 ق.م</div>
+      <p class="pharaoh-desc">أعظم ملكة في التاريخ القديم — حكمت فرعوناً بالتاج المزدوج واللحية الذهبية الطقوسية. أرسلت رحلة بونت التجارية وأعادت مصر إلى ذروة مجدها. حذفها خلفاؤها لم يمحُ اسمها.</p>
+      <ul class="pharaoh-achievements">
+        <li>معبد الدير البحري تحفة معمارية لا تُضاهى</li>
+        <li>رحلة بونت أجمل مغامرة تجارية في العصور القديمة</li>
+        <li>مسلتاها في الكرنك — إحداهما أطول مسلة باقية</li>
+      </ul>
+    </div>
+
+    <div class="pharaoh-card reveal reveal-delay-2">
+      <span class="pharaoh-era">الأسرة التاسعة عشرة</span>
+      <div class="pharaoh-name">سيتي الأول</div>
+      <div class="pharaoh-reign">1294 – 1279 ق.م</div>
+      <p class="pharaoh-desc">أب رمسيس الثاني وصانع عظمته — معبده في أبيدوس يحمل من أجمل النقوش الملوّنة في التاريخ. قاد حملات عسكرية في ليبيا وكنعان وأعاد لمصر هيبتها بعد ضعف ما بعد أخناتون.</p>
+      <ul class="pharaoh-achievements">
+        <li>معبد أبيدوس — أجمل نقوش في مصر القديمة</li>
+        <li>قائمة أبيدوس تُسمّي 76 ملكاً من أسلافه</li>
+        <li>حملات ليبيا وكنعان — إعادة الهيبة لمصر</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -839,54 +967,177 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
     <div class="divider reveal"></div>
     <p class="section-subtitle reveal">آمن المصريون القدماء بآلاف الآلهة التي تتحكم في قوى الطبيعة وشؤون الإنسان — كل إله يحمل رمزاً ورسالة ودوراً محدداً في المنظومة الكونية.</p>
 
+    <!-- الآلهة الكبرى التسعة (التاسوع المقدس) -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:2rem 0 0.5rem;font-size:1.2rem;letter-spacing:0.1em;">✦ التاسوع المقدس — الآلهة التسعة العظام ✦</h3>
+    <p class="reveal" style="text-align:center;color:var(--sand);opacity:0.6;font-size:0.9rem;margin-bottom:2rem;">التاسوع الهليوبوليتاني — أعظم تجمع للآلهة في الديانة المصرية القديمة</p>
     <div class="gods-grid">
       <div class="god-card reveal">
         <span class="god-symbol">𓁹</span>
-        <div class="god-name">رع</div>
-        <div class="god-role">إله الشمس والخلق</div>
-        <p class="god-desc">أعظم آلهة مصر — كبير الآلهة وخالق الكون. يُصوَّر برأس الصقر وقرص الشمس. كان الفرعون يُعدّ ابنه على الأرض.</p>
+        <div class="god-name">رع — أتوم</div>
+        <div class="god-role">إله الشمس والخلق الأول</div>
+        <p class="god-desc">أعظم آلهة مصر — رأس التاسوع وخالق الكون والبشر. يُصوَّر برأس الصقر وقرص الشمس ذي الأفعى. يسافر في قارب الشمس عبر السماء نهاراً وفي الجحيم ليلاً ليُولد من جديد كل فجر.</p>
       </div>
       <div class="god-card reveal reveal-delay-1">
         <span class="god-symbol">𓂀</span>
         <div class="god-name">حورس</div>
         <div class="god-role">إله السماء والملكية</div>
-        <p class="god-desc">يُصوَّر برأس الصقر — رمز الملك والحماية. عين حورس أشهر رموز مصر وتمثّل الشفاء والحماية والسلطة الإلهية.</p>
+        <p class="god-desc">يُصوَّر برأس الصقر — رمز الملك والحماية. عين حورس أشهر رموز مصر وتمثّل الشفاء والحماية والسلطة الإلهية. ابن أوزيريس وإيزيس، انتصر على عمه ست ليرث عرش مصر.</p>
       </div>
       <div class="god-card reveal reveal-delay-2">
         <span class="god-symbol">☥</span>
         <div class="god-name">أوزيريس</div>
-        <div class="god-role">إله الموتى والبعث</div>
-        <p class="god-desc">حاكم عالم الأموات وإله البعث والخصب. قصته من أشهر الأساطير المصرية — مات وبُعث من الموت ليحكم مملكة الآخرة.</p>
+        <div class="god-role">إله الموتى والبعث والخصب</div>
+        <p class="god-desc">حاكم عالم الأموات وإله البعث والخصب. قتله أخوه ست وجمّعت إيزيس أشلاءه فعاد للحياة ليحكم الآخرة. جسّد فكرة الموت والقيامة ورمز خصوبة نهر النيل.</p>
       </div>
       <div class="god-card reveal">
         <span class="god-symbol">𓆣</span>
         <div class="god-name">إيزيس</div>
-        <div class="god-role">إلهة الأمومة والسحر</div>
-        <p class="god-desc">أم الآلهة ورمز الأمومة المثالية — أعادت تجميع جسد زوجها أوزيريس وسحبت ابنها حورس. عُبدت في أرجاء العالم القديم.</p>
+        <div class="god-role">إلهة الأمومة والسحر والشفاء</div>
+        <p class="god-desc">أم الآلهة ورمز الأمومة المثالية — أعادت تجميع جسد زوجها أوزيريس وسحبت ابنها حورس. امتد عبادتها إلى روما واليونان. يُمثّلها تاج العرش على رأسها.</p>
       </div>
       <div class="god-card reveal reveal-delay-1">
         <span class="god-symbol">𓆙</span>
-        <div class="god-name">آمون</div>
-        <div class="god-role">ملك الآلهة</div>
-        <p class="god-desc">الإله الخفي والمقدس — بات في الدولة الحديثة أعظم الآلهة بعد اندماجه مع رع ليصبح آمون رع. كان كهنته أقوى من الفراعنة أحياناً.</p>
+        <div class="god-name">آمون — آمون رع</div>
+        <div class="god-role">ملك الآلهة والإله الخفي</div>
+        <p class="god-desc">الإله الخفي والمقدس — بات في الدولة الحديثة أعظم الآلهة بعد اندماجه مع رع. معبد الكرنك مكرّس له. كان كهنته أقوى من الفراعنة أحياناً في أواخر الدولة الحديثة.</p>
       </div>
       <div class="god-card reveal reveal-delay-2">
         <span class="god-symbol">𓋴</span>
         <div class="god-name">أنوبيس</div>
-        <div class="god-role">إله التحنيط والموتى</div>
-        <p class="god-desc">يُصوَّر برأس ابن آوى — حارس المقابر ومرشد أرواح الأموات إلى الآخرة. يُشرف على وزن قلب الميت في ميزان الحق أمام أوزيريس.</p>
+        <div class="god-role">إله التحنيط وحارس الأموات</div>
+        <p class="god-desc">يُصوَّر برأس ابن آوى — حارس المقابر ومرشد أرواح الأموات إلى الآخرة. يُشرف على وزن قلب الميت أمام ريشة ماعت في ميزان الحق، ويُقرر مصير الروح.</p>
       </div>
       <div class="god-card reveal">
         <span class="god-symbol">𓁣</span>
         <div class="god-name">تحوت</div>
-        <div class="god-role">إله الحكمة والكتابة</div>
-        <p class="god-desc">يُصوَّر برأس أبي منجل — إله الحكمة والعلم والكتابة والقمر. هو من اخترع الكتابة الهيروغليفية وحفظ السجلات الإلهية.</p>
+        <div class="god-role">إله الحكمة والكتابة والقمر</div>
+        <p class="god-desc">يُصوَّر برأس أبي منجل — إله الحكمة والعلم والكتابة والقمر. هو من اخترع الهيروغليفية وحفظ سجلات الآلهة. كاتب ميزان الحق يسجّل أحكام أوزيريس على الأموات.</p>
       </div>
       <div class="god-card reveal reveal-delay-1">
         <span class="god-symbol">𓇋</span>
         <div class="god-name">حتحور</div>
-        <div class="god-role">إلهة الحب والجمال</div>
-        <p class="god-desc">تُصوَّر بشكل امرأة بقرون البقرة — إلهة الفرح والحب والموسيقى والخصوبة. حاميةٌ للنساء ومرسل الأرواح إلى الجنة.</p>
+        <div class="god-role">إلهة الحب والجمال والموسيقى</div>
+        <p class="god-desc">تُصوَّر بشكل امرأة بقرون البقرة — إلهة الفرح والحب والموسيقى والخصوبة. حاميةٌ للنساء والأمهات. كانت كذلك إلهة الأموات ومستقبلة الأرواح في الجنة.</p>
+      </div>
+      <div class="god-card reveal reveal-delay-2">
+        <span class="god-symbol">𓅓</span>
+        <div class="god-name">ست</div>
+        <div class="god-role">إله الفوضى والعواصف</div>
+        <p class="god-desc">يُصوَّر بحيوان غريب لا يُشبه أي كائن — إله الفوضى والصحراء والعواصف والشر. قتل أخاه أوزيريس لكنه كان أيضاً حامياً لرع في رحلته الليلية ضد أفعى أبوبيس.</p>
+      </div>
+    </div>
+
+    <!-- المزيد من الآلهة -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:3rem 0 0.5rem;font-size:1.1rem;letter-spacing:0.1em;">✦ آلهة المصريين العظماء ✦</h3>
+    <p class="reveal" style="text-align:center;color:var(--sand);opacity:0.6;font-size:0.88rem;margin-bottom:1.5rem;">مئات الآلهة في الديانة المصرية — إليك أبرزهم</p>
+    <div class="gods-extended">
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjIyIiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjk1Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMTYiIGZpbGw9IiNGRkQ3MDAiLz4KICA8bGluZSB4MT0iNTAiIHkxPSI1IiB4Mj0iNTAiIHkyPSIyMiIgc3Ryb2tlPSIjRjVDNTE4IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI1MCIgeTE9Ijc4IiB4Mj0iNTAiIHkyPSI5NSIgc3Ryb2tlPSIjRjVDNTE4IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI1IiB5MT0iNTAiIHgyPSIyMiIgeTI9IjUwIiBzdHJva2U9IiNGNUM1MTgiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9Ijc4IiB5MT0iNTAiIHgyPSI5NSIgeTI9IjUwIiBzdHJva2U9IiNGNUM1MTgiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjE5IiB5MT0iMTkiIHgyPSIzMSIgeTI9IjMxIiBzdHJva2U9IiNGNUM1MTgiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNjkiIHkxPSI2OSIgeDI9IjgxIiB5Mj0iODEiIHN0cm9rZT0iI0Y1QzUxOCIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSI4MSIgeTE9IjE5IiB4Mj0iNjkiIHkyPSIzMSIgc3Ryb2tlPSIjRjVDNTE4IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjE5IiB5MT0iODEiIHgyPSIzMSIgeTI9IjY5IiBzdHJva2U9IiNGNUM1MTgiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI4IiBmaWxsPSIjRkZGMTc2Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjEwIiBmaWxsPSIjOEI2OTE0IiBmb250LWZhbWlseT0ic2VyaWYiPvCTh7M8L3RleHQ+Cjwvc3ZnPg==" alt="آتون" loading="lazy"></span>
+        <div class="god-mini-name">آتون</div>
+        <div class="god-mini-role">قرص الشمس الواحد</div>
+        <p class="god-mini-desc">الإله الأوحد في عهد أخناتون — أول محاولة توحيد ديني في التاريخ. مُثّل بقرص الشمس الممتدة أشعته.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjY1IiByeD0iMTgiIHJ5PSIyMiIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC45Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI0MiIgcj0iMTYiIGZpbGw9IiNDOUE4NEMiLz4KICA8cG9seWdvbiBwb2ludHM9IjM2LDMwIDMyLDE1IDQyLDI2IiBmaWxsPSIjQzlBODRDIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NCwzMCA2OCwxNSA1OCwyNiIgZmlsbD0iI0M5QTg0QyIvPgogIDxjaXJjbGUgY3g9IjQ1IiBjeT0iNDAiIHI9IjQiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI1NSIgY3k9IjQwIiByPSI0IiBmaWxsPSIjMUEwQTAwIi8+CiAgPGNpcmNsZSBjeD0iNDYiIGN5PSIzOSIgcj0iMS41IiBmaWxsPSIjRkZENzAwIi8+CiAgPGNpcmNsZSBjeD0iNTYiIGN5PSIzOSIgcj0iMS41IiBmaWxsPSIjRkZENzAwIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNDciIHJ4PSI1IiByeT0iMyIgZmlsbD0iI0U4Qjg5QSIvPgogIDxsaW5lIHgxPSIzNSIgeTE9IjQ2IiB4Mj0iMjUiIHkyPSI0NCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSIzNSIgeTE9IjQ5IiB4Mj0iMjQiIHkyPSI0OSIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI2NSIgeTE9IjQ2IiB4Mj0iNzUiIHkyPSI0NCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI2NSIgeTE9IjQ5IiB4Mj0iNzYiIHkyPSI0OSIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxwYXRoIGQ9Ik00Miw4NyBRNTAsOTUgNTgsODciIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSIzMCIgY3k9IjIwIiByPSIyIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjQiLz4KPC9zdmc+" alt="باست" loading="lazy"></span>
+        <div class="god-mini-name">باست</div>
+        <div class="god-mini-role">إلهة القطط والبيت</div>
+        <p class="god-mini-desc">يُصوَّر برأس القطة — إلهة البيت والأمومة والحماية والمرح. عُبدت في بوباستيس وكانت القطط مقدسة في مصر.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjY1IiByeD0iMTYiIHJ5PSIyMCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDIiIHI9IjE3IiBmaWxsPSIjRDRBODMwIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI0MiIgcj0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhCNDUxMyIgc3Ryb2tlLXdpZHRoPSI2IiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI0NCIgY3k9IjQwIiByPSI0LjUiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI1NiIgY3k9IjQwIiByPSI0LjUiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjM5IiByPSIxLjgiIGZpbGw9IiNGRjZCMDAiLz4KICA8Y2lyY2xlIGN4PSI1NyIgY3k9IjM5IiByPSIxLjgiIGZpbGw9IiNGRjZCMDAiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI0NyIgcng9IjUiIHJ5PSIzLjUiIGZpbGw9IiNFOEE4N0MiLz4KICA8cGF0aCBkPSJNNDYsNTIgTDUwLDU2IEw1NCw1MiIgc3Ryb2tlPSIjRDRBODMwIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjE4IiByPSI5IiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjE4IiByPSI2IiBmaWxsPSIjRkZENzAwIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxOCIgcj0iMyIgZmlsbD0iI0ZGRjE3NiIvPgo8L3N2Zz4=" alt="سخمت" loading="lazy"></span>
+        <div class="god-mini-name">سخمت</div>
+        <div class="god-mini-role">إلهة الحرب والأوبئة</div>
+        <p class="god-mini-desc">يُصوَّر برأس اللبؤة — إلهة الحرب والأمراض والشفاء. كانت حاميةً للفرعون في المعارك وحارسةً للأطباء.</p>
+      </div>
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjYwIiByeD0iMjAiIHJ5PSIxMiIgZmlsbD0iIzVEOEEzQyIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNjAiIHJ4PSIxOCIgcnk9IjEwIiBmaWxsPSIjNkI5RTQ1Ii8+CiAgPGVsbGlwc2UgY3g9IjcwIiBjeT0iNTgiIHJ4PSIxOCIgcnk9IjciIGZpbGw9IiM1RDhBM0MiLz4KICA8ZWxsaXBzZSBjeD0iNjgiIGN5PSI1NiIgcng9IjE1IiByeT0iNSIgZmlsbD0iIzZCOUU0NSIvPgogIDxjaXJjbGUgY3g9IjYyIiBjeT0iNTMiIHI9IjMiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI2MyIgY3k9IjUyLjUiIHI9IjEiIGZpbGw9IiNGRkQ3MDAiLz4KICA8cGF0aCBkPSJNNjIsNjEgTDU4LDY4IEw2Miw2NSBMNjUsNzAgTDY4LDY1IEw3Miw2OCBMNjgsNjEiIGZpbGw9IiM1RDhBM0MiLz4KICA8cmVjdCB4PSIzMCIgeT0iNTUiIHdpZHRoPSI0IiBoZWlnaHQ9IjE0IiByeD0iMiIgZmlsbD0iIzVEOEEzQyIvPgogIDxyZWN0IHg9IjYyIiB5PSI2MiIgd2lkdGg9IjQiIGhlaWdodD0iMTQiIHJ4PSIyIiBmaWxsPSIjNUQ4QTNDIi8+CiAgPHRleHQgeD0iNTAiIHk9IjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjIyIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjgiPvCTgoA8L3RleHQ+Cjwvc3ZnPg==" alt="سوبك" loading="lazy"></span>
+        <div class="god-mini-name">سوبك</div>
+        <div class="god-mini-role">إله التماسيح والنيل</div>
+        <p class="god-mini-desc">يُصوَّر برأس التمساح — إله النيل والخصوبة والقوة. عُبد في الفيوم وكروم ودون. كان يرمز لقوة الفرعون.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Min_standing.svg/100px-Min_standing.svg.png" alt="مين" loading="lazy"></span>
+        <div class="god-mini-name">مين</div>
+        <div class="god-mini-role">إله الخصوبة والطرق</div>
+        <p class="god-mini-desc">إله الخصوبة والمسافرين وحامي الصحاري. عُبد في قفط وأخميم. كان راعي القوافل التجارية.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxwYXRoIGQ9Ik01MCwzMCBDMzUsMzAgMTUsNDUgMTAsNjAgQzI1LDU1IDM1LDYwIDUwLDU4IEM2NSw2MCA3NSw1NSA5MCw2MCBDODUsNDUgNjUsMzAgNTAsMzBaIiBmaWxsPSIjRThFMEM4IiBvcGFjaXR5PSIwLjkiLz4KICA8cGF0aCBkPSJNNTAsMzAgQzM1LDMwIDE1LDQ1IDEwLDYwIEMyNSw1NSAzNSw2MCA1MCw1OCIgZmlsbD0iI0Q0QzhBOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjgiIHI9IjEwIiBmaWxsPSIjRThFMEM4Ii8+CiAgPHBhdGggZD0iTTQyLDI4IEM0MCwyMiA0NCwxOCA1MCwyMCBDNTYsMTggNjAsMjIgNTgsMjgiIGZpbGw9IiNDOUEwNUEiLz4KICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjI2IiByPSIyLjUiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI0NyIgY3k9IjI1LjUiIHI9IjEiIGZpbGw9IiNGRkQ3MDAiLz4KICA8cGF0aCBkPSJNNTAsMzggTDUwLDc1IiBzdHJva2U9IiNFOEUwQzgiIHN0cm9rZS13aWR0aD0iNCIvPgogIDxwYXRoIGQ9Ik00MCw3MiBMNTAsNzUgTDYwLDcyIiBzdHJva2U9IiNFOEUwQzgiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMTgiIHI9IjciIGZpbGw9IiNGNUM1MTgiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik00NywxNSBMNTAsMTAgTDUzLDE1IiBmaWxsPSIjRjVDNTE4Ii8+Cjwvc3ZnPg==" alt="نخبت" loading="lazy"></span>
+        <div class="god-mini-name">نخبت</div>
+        <div class="god-mini-role">إلهة مصر العليا</div>
+        <p class="god-mini-desc">يُصوَّر بالنسر الأبيض — حاميةٌ لمصر العليا والأم الإلهية للفراعنة. تُمثّل أحد قطبي تاج مصر المزدوج.</p>
+      </div>
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxwYXRoIGQ9Ik01MCw5MCBDNTAsOTAgMzUsODAgMzMsNjAgQzMxLDQwIDQwLDI1IDUwLDIwIEM2MCwyNSA2OSw0MCA2Nyw2MCBDNjUsODAgNTAsOTAgNTAsOTBaIiBmaWxsPSIjNEE4QzNGIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSIyMiIgcng9IjE0IiByeT0iMTAiIGZpbGw9IiM1QUFBNEEiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSIyMiIgcng9IjIwIiByeT0iNiIgZmlsbD0iIzRBOEMzRiIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNDYiIGN5PSIyMCIgcj0iMyIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjU0IiBjeT0iMjAiIHI9IjMiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI0NyIgY3k9IjE5LjUiIHI9IjEuMiIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9IjU1IiBjeT0iMTkuNSIgcj0iMS4yIiBmaWxsPSIjRkZENzAwIi8+CiAgPHBhdGggZD0iTTQ3LDI1IEw1MCwyOCBMNTMsMjUiIHN0cm9rZT0iIzNBNkMyRiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxMCIgcj0iNyIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC45Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxMCIgcj0iNCIgZmlsbD0iI0ZGRDcwMCIvPgo8L3N2Zz4=" alt="واجيت" loading="lazy"></span>
+        <div class="god-mini-name">واجيت</div>
+        <div class="god-mini-role">إلهة مصر السفلى</div>
+        <p class="god-mini-desc">يُصوَّر بالأفعى الكوبرا — حاميةٌ لمصر السفلى والدلتا. تزيّن تاج الفرعون في شكل الأوريوس الملكي.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJ3ZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUI2Q0E4Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBBM0Q2MiIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgeD0iNSIgeT0iMzAiIHdpZHRoPSI5MCIgaGVpZ2h0PSI2NSIgcng9IjgiIGZpbGw9InVybCgjd2cpIi8+CiAgPHBhdGggZD0iTTUsNDIgUTIwLDM2IDM1LDQyIFE1MCw0OCA2NSw0MiBRODAsMzYgOTUsNDIiIHN0cm9rZT0iIzVEQURFMiIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjgiLz4KICA8cGF0aCBkPSJNNSw1MiBRMjAsNDYgMzUsNTIgUTUwLDU4IDY1LDUyIFE4MCw0NiA5NSw1MiIgc3Ryb2tlPSIjNURBREUyIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik01LDYyIFEyMCw1NiAzNSw2MiBRNTAsNjggNjUsNjIgUTgwLDU2IDk1LDYyIiBzdHJva2U9IiM1REFERTIiIHN0cm9rZS13aWR0aD0iMi41IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjIwIiByPSIxMyIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyMCIgcj0iOSIgZmlsbD0iI0ZGRDcwMCIvPgogIDx0ZXh0IHg9IjUwIiB5PSIyNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzhCNjkxNCI+8JOBuTwvdGV4dD4KPC9zdmc+" alt="نون" loading="lazy"></span>
+        <div class="god-mini-name">نون</div>
+        <div class="god-mini-role">إله المياه الأولى</div>
+        <p class="god-mini-desc">المياه البدائية التي وُجدت قبل الخلق — الفوضى المائية التي نشأ منها آتوم. يُمثّل إله الأصل والبداية الكونية.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxsaW5lIHgxPSI1MCIgeTE9Ijg1IiB4Mj0iNTAiIHkyPSIyMCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjMiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSIyMCIgcng9IjgiIHJ5PSIxNSIgZmlsbD0iI0M5QTg0QyIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjQwIiB4Mj0iMzAiIHkyPSIzMCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8ZWxsaXBzZSBjeD0iMjQiIGN5PSIyNyIgcng9IjciIHJ5PSIxMiIgZmlsbD0iI0M5QTg0QyIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwIDI0IDI3KSIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjQwIiB4Mj0iNzAiIHkyPSIzMCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8ZWxsaXBzZSBjeD0iNzYiIGN5PSIyNyIgcng9IjciIHJ5PSIxMiIgZmlsbD0iI0M5QTg0QyIgdHJhbnNmb3JtPSJyb3RhdGUoMzAgNzYgMjcpIi8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNTUiIHgyPSIyOCIgeTI9IjQ4IiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGVsbGlwc2UgY3g9IjIyIiBjeT0iNDYiIHJ4PSI2IiByeT0iMTAiIGZpbGw9IiNDOUE4NEMiIHRyYW5zZm9ybT0icm90YXRlKC0yNSAyMiA0NikiLz4KICA8bGluZSB4MT0iNTAiIHkxPSI1NSIgeDI9IjcyIiB5Mj0iNDgiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8ZWxsaXBzZSBjeD0iNzgiIGN5PSI0NiIgcng9IjYiIHJ5PSIxMCIgZmlsbD0iI0M5QTg0QyIgdHJhbnNmb3JtPSJyb3RhdGUoMjUgNzggNDYpIi8+CiAgPHJlY3QgeD0iNDUiIHk9IjgyIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIGZpbGw9IiM4QjY5MTQiIG9wYWNpdHk9IjAuNSIvPgo8L3N2Zz4=" alt="نيبري" loading="lazy"></span>
+        <div class="god-mini-name">نيبري</div>
+        <div class="god-mini-role">إله الحبوب والقمح</div>
+        <p class="god-mini-desc">يُصوَّر بالقمح — إله الخصب والأقماح والزراعة. كان يرمز لعودة الحياة بعد كل فيضان للنيل.</p>
+      </div>
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTUiIHI9IjIwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1NSIgcj0iMTUiIGZpbGw9IiNENEE4MzAiLz4KICA8dGV4dCB4PSI1MCIgeT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM4QjY5MTQiPvCTh4s8L3RleHQ+CiAgPHBhdGggZD0iTTIwLDMwIFE1MCwxMCA4MCwzMCIgc3Ryb2tlPSIjQUVENkYxIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC45Ii8+CiAgPHBhdGggZD0iTTE1LDQwIFE1MCwxOCA4NSw0MCIgc3Ryb2tlPSIjQUVENkYxIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTE4LDUwIFE1MCwzNSA4Miw1MCIgc3Ryb2tlPSIjQUVENkYxIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjUiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDQ2LDIwIDU0LDIwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+" alt="شو" loading="lazy"></span>
+        <div class="god-mini-name">شو</div>
+        <div class="god-mini-role">إله الهواء والنور</div>
+        <p class="god-mini-desc">ابن آتوم الأول — إله الهواء والنور والفضاء. يُصوَّر رافعاً السماء (نوت) عن الأرض (جب) بذراعيه.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2t5IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwQjBCMkQiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMUEwQTQwIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjgiIGZpbGw9InVybCgjc2t5KSIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMTUiIHI9IjIiIGZpbGw9IiNGRkQ3MDAiLz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjgiIHI9IjEuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNjUiIGN5PSIxMiIgcj0iMiIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9IjgwIiBjeT0iMjAiIHI9IjEuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iMzAiIGN5PSIyNSIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+CiAgPGNpcmNsZSBjeD0iNTUiIGN5PSIxOCIgcj0iMS41IiBmaWxsPSIjRkZENzAwIiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSI4OCIgY3k9IjM1IiByPSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KICA8cGF0aCBkPSJNNSw5NSBRNTAsMjAgOTUsOTUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIzIiBmaWxsPSJyZ2JhKDIwMSwxNjgsNzYsMC4xNSkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjIwIiByPSIxMCIgZmlsbD0iI0Y1QzUxOCIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjciIGZpbGw9IiNGRkQ3MDAiLz4KICA8Y2lyY2xlIGN4PSI1MyIgY3k9IjE3IiByPSIzIiBmaWxsPSIjMUEwQTQwIi8+Cjwvc3ZnPg==" alt="نوت" loading="lazy"></span>
+        <div class="god-mini-name">نوت</div>
+        <div class="god-mini-role">إلهة السماء والنجوم</div>
+        <p class="god-mini-desc">تُصوَّر وجسدها المنحني يُغطي الأرض كقبة السماء — إلهة النجوم والسماء. تبتلع الشمس كل غروب وتلدها كل فجر.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJlYXJ0aCIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNUQ0MDM3Ii8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNFMjcyMyIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3QgeD0iMCIgeT0iNTUiIHdpZHRoPSIxMDAiIGhlaWdodD0iNDUiIGZpbGw9InVybCgjZWFydGgpIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNTUiIHJ4PSI1MCIgcnk9IjgiIGZpbGw9IiM2RDRDNDEiLz4KICA8cGF0aCBkPSJNMTAsNTUgUTI1LDQ4IDQwLDU1IFE1NSw2MiA3MCw1NSBRODUsNDggOTUsNTUiIHN0cm9rZT0iIzhENkU2MyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTIwLDY4IFEzMCw2MyA0MCw2OCBRNTAsNzMgNjAsNjggUTcwLDYzIDgwLDY4IiBzdHJva2U9IiM4RDZFNjMiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjM1IiByPSIxNCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI0MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzhCNjkxNCI+8JOPjzwvdGV4dD4KPC9zdmc+" alt="جب" loading="lazy"></span>
+        <div class="god-mini-name">جب</div>
+        <div class="god-mini-role">إله الأرض</div>
+        <p class="god-mini-desc">يُصوَّر مستلقياً تحت قبة السماء — إله الأرض والنباتات. زوج نوت وأبو أوزيريس وإيزيس وست ونفتيس.</p>
+      </div>
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjY4IiByeD0iMTgiIHJ5PSIyMiIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDIiIHI9IjE1IiBmaWxsPSIjRDRBODMwIi8+CiAgPHBhdGggZD0iTTM1LDM1IEw1MCwxNSBMNjUsMzUgTDYwLDM1IEw2MCw0NSBMNDAsNDUgTDQwLDM1IFoiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNyIvPgogIDxyZWN0IHg9IjQ0IiB5PSIzOCIgd2lkdGg9IjEyIiBoZWlnaHQ9IjgiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjQwIiByPSIzIiBmaWxsPSIjMUEwQTAwIi8+CiAgPGNpcmNsZSBjeD0iNTUiIGN5PSI0MCIgcj0iMyIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjQ2IiBjeT0iMzkuNSIgcj0iMS4yIiBmaWxsPSIjQzlBODRDIi8+CiAgPGNpcmNsZSBjeD0iNTYiIGN5PSIzOS41IiByPSIxLjIiIGZpbGw9IiNDOUE4NEMiLz4KICA8dGV4dCB4PSI1MCIgeT0iOTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNyI+8JOKljwvdGV4dD4KPC9zdmc+" alt="نفتيس" loading="lazy"></span>
+        <div class="god-mini-name">نفتيس</div>
+        <div class="god-mini-role">إلهة المنزل والأموات</div>
+        <p class="god-mini-desc">أخت إيزيس وشقيقة ست — إلهة الموت والحداد والحزن. ساعدت إيزيس في جمع أشلاء أوزيريس وتحنيطه.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjY1IiByeD0iMTgiIHJ5PSIyMCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDIiIHI9IjE2IiBmaWxsPSIjRDRBODMwIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI0MiIgcj0iMjIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhCNDUxMyIgc3Ryb2tlLXdpZHRoPSI4IiBvcGFjaXR5PSIwLjUiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjQyIiByPSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTA1MjJEIiBzdHJva2Utd2lkdGg9IjUiIG9wYWNpdHk9IjAuNCIvPgogIDxjaXJjbGUgY3g9IjQ0IiBjeT0iNDAiIHI9IjQuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjU2IiBjeT0iNDAiIHI9IjQuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjQ1IiBjeT0iMzkiIHI9IjEuOCIgZmlsbD0iI0ZGOEMwMCIvPgogIDxjaXJjbGUgY3g9IjU3IiBjeT0iMzkiIHI9IjEuOCIgZmlsbD0iI0ZGOEMwMCIvPgogIDxwYXRoIGQ9Ik00NCw0OSBMNTAsNTQgTDU2LDQ5IiBzdHJva2U9IiNENEE4MzAiIHN0cm9rZS13aWR0aD0iMi41IiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTQwLDQ4IEwzNSw0NiBNNDAsNTEgTDM0LDUyIE02MCw0OCBMNjUsNDYgTTYwLDUxIEw2Niw1MiIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjEuNSIvPgo8L3N2Zz4=" alt="ماهس" loading="lazy"></span>
+        <div class="god-mini-name">ماهس</div>
+        <div class="god-mini-role">إله الحرب والسيوف</div>
+        <p class="god-mini-desc">إله الحرب يُصوَّر برأس الأسد — ابن رع وباست. يرمز للقوة والعدالة الإلهية، ويُعدّ حامياً للمدن.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxwYXRoIGQ9Ik01MCwxMCBDNDUsMTAgMzAsMzUgMjgsNjAgQzM1LDU1IDQ1LDU4IDUwLDU2IEM1NSw1OCA2NSw1NSA3Miw2MCBDNzAsMzUgNTUsMTAgNTAsMTBaIiBmaWxsPSIjRjVGNURDIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPHBhdGggZD0iTTUwLDEwIEM0NSwxMCAzMCwzNSAyOCw2MCBDMzUsNTUgNDUsNTggNTAsNTYiIGZpbGw9IiNFOEUwQzAiLz4KICA8bGluZSB4MT0iNTAiIHkxPSIxMCIgeDI9IjUwIiB5Mj0iODUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI4OCIgcng9IjgiIHJ5PSI1IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciLz4KICA8cGF0aCBkPSJNMzAsMzggUTUwLDI4IDcwLDM4IiBzdHJva2U9IiNDOEIwODAiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjciLz4KICA8cGF0aCBkPSJNMjgsNTAgUTUwLDQwIDcyLDUwIiBzdHJva2U9IiNDOEIwODAiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjYiLz4KPC9zdmc+" alt="ماعت" loading="lazy"></span>
+        <div class="god-mini-name">ماعت</div>
+        <div class="god-mini-role">إلهة العدل والحق والتوازن</div>
+        <p class="god-mini-desc">تُصوَّر بريشة النعامة — تجسيد العدل والحق والنظام الكوني. ريشتها هي الميزان الذي يُقاس به قلب الميت في محاكمة أوزيريس.</p>
+      </div>
+      <div class="god-mini reveal">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTUiIHI9IjIyIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMyIgb3BhY2l0eT0iMC43Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNDgiIHJ4PSIxNCIgcnk9IjE4IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNDIiIHJ4PSIxMCIgcnk9IjgiIGZpbGw9IiNENEE4MzAiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSIzOCIgcng9IjciIHJ5PSI0IiBmaWxsPSIjQzlBODRDIi8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNzciIHgyPSI1MCIgeTI9IjkwIiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxsaW5lIHgxPSIzMCIgeTE9Ijg1IiB4Mj0iNzAiIHkyPSI4NSIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjM4IiByeD0iNCIgcj0iNCIgZmlsbD0iIzFBMEEwMCIgb3BhY2l0eT0iMC41Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjE4IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjgiPvCThL88L3RleHQ+Cjwvc3ZnPg==" alt="خنوم" loading="lazy"></span>
+        <div class="god-mini-name">خنوم</div>
+        <div class="god-mini-role">إله الخلق والفخار</div>
+        <p class="god-mini-desc">يُصوَّر برأس الكبش — إله خلق البشر على دولاب الفخار من طمي النيل. حارس منابع النيل عند الشلال الأول.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-1">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBCMEIyRCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTgiIHI9IjE4IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1OCIgcj0iMTQiIGZpbGw9IiNENEE4MzAiLz4KICA8dGV4dCB4PSI1MCIgeT0iNjMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM4QjY5MTQiPvCTgbk8L3RleHQ+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyMiIgcj0iMTIiIGZpbGw9IiNFOEU4RTgiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjIiIHI9IjkiIGZpbGw9IiNGNUY1RjUiLz4KICA8cGF0aCBkPSJNMzgsMTggUTUwLDE0IDU4LDIyIFE1MCwzMCA0MiwyMiBRMzgsMTggMzgsMThaIiBmaWxsPSIjMEIwQjJEIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxNSIgcj0iNSIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPg==" alt="خونسو" loading="lazy"></span>
+        <div class="god-mini-name">خونسو</div>
+        <div class="god-mini-role">إله القمر</div>
+        <p class="god-mini-desc">ابن آمون وموت — إله القمر والزمن والشفاء. يُصوَّر شاباً بقرص القمر والهلال على رأسه. كان معبده بالكرنك يحتضن علاج المرضى.</p>
+      </div>
+      <div class="god-mini reveal reveal-delay-2">
+        <span class="god-mini-sym"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjYwIiByeD0iMjIiIHJ5PSIxOCIgZmlsbD0iIzVEOEEzQyIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNjAiIHJ4PSIxOCIgcnk9IjE0IiBmaWxsPSIjNkI5RTQ1Ii8+CiAgPGNpcmNsZSBjeD0iMzgiIGN5PSI0OCIgcj0iOCIgZmlsbD0iIzVEOEEzQyIvPgogIDxjaXJjbGUgY3g9IjYyIiBjeT0iNDgiIHI9IjgiIGZpbGw9IiM1RDhBM0MiLz4KICA8Y2lyY2xlIGN4PSIzNyIgY3k9IjQ3IiByPSI1IiBmaWxsPSIjRjVGNURDIi8+CiAgPGNpcmNsZSBjeD0iNjEiIGN5PSI0NyIgcj0iNSIgZmlsbD0iI0Y1RjVEQyIvPgogIDxjaXJjbGUgY3g9IjM2IiBjeT0iNDYiIHI9IjIuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iNDYiIHI9IjIuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjM3IiBjeT0iNDUuNSIgcj0iMSIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9IjYxIiBjeT0iNDUuNSIgcj0iMSIgZmlsbD0iI0ZGRDcwMCIvPgogIDxwYXRoIGQ9Ik00NCw2MiBRNTAsNjYgNTYsNjIiIHN0cm9rZT0iIzNBNkMyRiIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTI4LDY4IEwyMCw4MCIgc3Ryb2tlPSIjNUQ4QTNDIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik03Miw2OCBMODAsODAiIHN0cm9rZT0iIzVEOEEzQyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMzUsNzIgTDI1LDgyIiBzdHJva2U9IiM1RDhBM0MiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHBhdGggZD0iTTY1LDcyIEw3NSw4MiIgc3Ryb2tlPSIjNUQ4QTNDIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjkiIGZpbGw9IiNGNUM1MTgiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjYiIGZpbGw9IiNGRkQ3MDAiLz4KPC9zdmc+" alt="هيقت" loading="lazy"></span>
+        <div class="god-mini-name">هيقت</div>
+        <div class="god-mini-role">إلهة الولادة والحياة</div>
+        <p class="god-mini-desc">تُصوَّر برأس الضفدعة — إلهة الولادة والخصوبة. حاضرةٌ عند كل ولادة لتمنح الروح للجسد الجديد. رمز التجدد والحياة.</p>
       </div>
     </div>
   </div>
@@ -900,35 +1151,480 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
     <h2 class="section-title reveal">الكتابة الهيروغليفية</h2>
     <div class="divider reveal"></div>
     <div class="hiero-intro reveal">
-      <p>ابتكر المصريون القدماء نظام الكتابة الهيروغليفية قبل نحو 5200 سنة — وهي من أقدم أنظمة الكتابة في التاريخ. تعني كلمة "هيروغليفية" باليونانية "النقش المقدس"، وقد استُخدمت في نقش النصوص الدينية والملكية على جدران المعابد والمقابر. يتألف النظام من أكثر من 700 رمز، ظل سرّها مطويّاً لعصور حتى حُلّ لغزها عام 1822 بفضل حجر رشيد.</p>
+      <p>ابتكر المصريون القدماء نظام الكتابة الهيروغليفية قبل نحو 5200 سنة — وهي من أقدم أنظمة الكتابة في التاريخ. تعني كلمة "هيروغليفية" باليونانية "النقش المقدس"، وقد استُخدمت في نقش النصوص الدينية والملكية على جدران المعابد والمقابر. يتألف النظام من أكثر من 700 رمز أحادية وثنائية وثلاثية، ظل سرّها مطويّاً لعصور حتى حُلّ لغزها عام 1822 بفضل حجر رشيد.</p>
     </div>
 
-    <div class="hiero-grid">
-      <div class="hiero-card reveal"><span class="hiero-symbol">𓂀</span><span class="hiero-meaning">عين حورس</span><span class="hiero-sound">رمز الحماية والملكية</span></div>
-      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓆣</span><span class="hiero-meaning">الجعران</span><span class="hiero-sound">رمز البعث والتجدد</span></div>
-      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">☥</span><span class="hiero-meaning">الأنخ</span><span class="hiero-sound">رمز الحياة والخلود</span></div>
-      <div class="hiero-card reveal"><span class="hiero-symbol">𓋴</span><span class="hiero-meaning">الأفعى</span><span class="hiero-sound">صوت: س</span></div>
-      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓆙</span><span class="hiero-meaning">الصقر</span><span class="hiero-sound">رمز الفرعون والشمس</span></div>
-      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓇋</span><span class="hiero-meaning">ورقة البردي</span><span class="hiero-sound">صوت: إ</span></div>
-      <div class="hiero-card reveal"><span class="hiero-symbol">𓁹</span><span class="hiero-meaning">رع — الشمس</span><span class="hiero-sound">صوت: ر</span></div>
-      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓃀</span><span class="hiero-meaning">القدم</span><span class="hiero-sound">صوت: ب</span></div>
-      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓅓</span><span class="hiero-meaning">البومة</span><span class="hiero-sound">صوت: م</span></div>
-      <div class="hiero-card reveal"><span class="hiero-symbol">𓈖</span><span class="hiero-meaning">الماء</span><span class="hiero-sound">صوت: ن</span></div>
-      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓇳</span><span class="hiero-meaning">قرص الشمس</span><span class="hiero-sound">رمز رع / آتون</span></div>
-      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓋀</span><span class="hiero-meaning">تاج مصر</span><span class="hiero-sound">رمز الملكية</span></div>
+    <!-- الحروف الأبجدية الهيروغليفية الكاملة -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:2rem 0 0.5rem;font-size:1.1rem;">✦ الأبجدية الهيروغليفية الكاملة — أحادية الحروف ✦</h3>
+    <p class="reveal" style="text-align:center;color:var(--sand);opacity:0.6;font-size:0.87rem;margin-bottom:1rem;">الحروف الـ 24 الأحادية — أساس الكتابة المصرية</p>
+    <div class="hiero-alphabet">
+      <div class="hiero-letter reveal"><span class="hl-sym">𓄿</span><span class="hl-ar">أ</span><span class="hl-en">A</span><span class="hl-name">النسر — ꜣ</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓇋</span><span class="hl-ar">إ</span><span class="hl-en">i</span><span class="hl-name">ورقة البردي — j</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓂝</span><span class="hl-ar">ع</span><span class="hl-en">ꜥ</span><span class="hl-name">الساعد — ꜥ</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓃀</span><span class="hl-ar">ب</span><span class="hl-en">B</span><span class="hl-name">القدم — b</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓊪</span><span class="hl-ar">ف/پ</span><span class="hl-en">P</span><span class="hl-name">الحصيرة — p</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓆑</span><span class="hl-ar">ف</span><span class="hl-en">F</span><span class="hl-name">الأفعى الينفاخ — f</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓅓</span><span class="hl-ar">م</span><span class="hl-en">M</span><span class="hl-name">البومة — m</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓈖</span><span class="hl-ar">ن</span><span class="hl-en">N</span><span class="hl-name">الماء — n</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓂋</span><span class="hl-ar">ر</span><span class="hl-en">R</span><span class="hl-name">الفم — r</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓉔</span><span class="hl-ar">ه</span><span class="hl-en">H</span><span class="hl-name">المخطط — h</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓎛</span><span class="hl-ar">ح</span><span class="hl-en">Ḥ</span><span class="hl-name">فتيلة الحبل — ḥ</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓐍</span><span class="hl-ar">خ</span><span class="hl-en">Ḫ</span><span class="hl-name">المصفاة — ḫ</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓄡</span><span class="hl-ar">ز</span><span class="hl-en">Z</span><span class="hl-name">اللولب — z</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓋴</span><span class="hl-ar">س</span><span class="hl-en">S</span><span class="hl-name">القماشة — s</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓈙</span><span class="hl-ar">ش</span><span class="hl-en">Š</span><span class="hl-name">البركة — š</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓎡</span><span class="hl-ar">ق</span><span class="hl-en">Q</span><span class="hl-name">التل — q</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓎢</span><span class="hl-ar">ك</span><span class="hl-en">K</span><span class="hl-name">المقعد — k</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓎼</span><span class="hl-ar">ج</span><span class="hl-en">G</span><span class="hl-name">الجرة — g</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓏏</span><span class="hl-ar">ت</span><span class="hl-en">T</span><span class="hl-name">رغيف الخبز — t</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓍿</span><span class="hl-ar">ط</span><span class="hl-en">Ṯ</span><span class="hl-name">التلة — ṯ</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓂧</span><span class="hl-ar">د</span><span class="hl-en">D</span><span class="hl-name">اليد — d</span></div>
+      <div class="hiero-letter reveal"><span class="hl-sym">𓆓</span><span class="hl-ar">ذ</span><span class="hl-en">Ḏ</span><span class="hl-name">الأفعى — ḏ</span></div>
+      <div class="hiero-letter reveal reveal-delay-1"><span class="hl-sym">𓅱</span><span class="hl-ar">و</span><span class="hl-en">W</span><span class="hl-name">الكتكوت — w</span></div>
+      <div class="hiero-letter reveal reveal-delay-2"><span class="hl-sym">𓇌</span><span class="hl-ar">ي</span><span class="hl-en">Y</span><span class="hl-name">ريشتان — y</span></div>
     </div>
 
-    <div style="text-align:center; margin-top:2.5rem; padding: 1.5rem; background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.15); border-radius:6px; max-width:700px; margin-left:auto; margin-right:auto;" class="reveal">
-      <p style="color:var(--gold-light); font-size:1.1rem; line-height:1.9;">
-        <strong style="color:var(--gold);">حجر رشيد:</strong> اكتُشف عام 1799 خلال الحملة الفرنسية على مصر — حجر كُتب عليه نفس النص بثلاث لغات: الهيروغليفية والديموطيقية واليونانية. فكّ العالم الفرنسي جان فرانسوا شامبليون رموز الهيروغليفية عام 1822 بفضل هذا الحجر، وفتح بذلك كنوز الحضارة المصرية للعالم.
+    <!-- رموز مهمة -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:3rem 0 0.5rem;font-size:1.1rem;">✦ الرموز الإلهية والملكية ✦</h3>
+    <div class="hiero-grid" style="margin-top:1.5rem;">
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓂀</span><span class="hiero-meaning">عين حورس — ودجات</span><span class="hiero-sound">رمز الحماية والملكية والصحة</span></div>
+      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓆣</span><span class="hiero-meaning">الجعران — خبري</span><span class="hiero-sound">رمز البعث والتجدد — الشمس الصاعدة</span></div>
+      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">☥</span><span class="hiero-meaning">الأنخ — عنخ</span><span class="hiero-sound">رمز الحياة والخلود الأبدي</span></div>
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓋴</span><span class="hiero-meaning">الكوبرا — أوريوس</span><span class="hiero-sound">رمز الفرعون والحماية الملكية</span></div>
+      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓆙</span><span class="hiero-meaning">الصقر — حورس</span><span class="hiero-sound">رمز الفرعون والشمس والانتصار</span></div>
+      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓇋</span><span class="hiero-meaning">ورقة البردي</span><span class="hiero-sound">رمز مصر السفلى — الخضرة والحياة</span></div>
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓁹</span><span class="hiero-meaning">عين رع — قرص الشمس</span><span class="hiero-sound">رمز رع إله الشمس والخلق</span></div>
+      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓃀</span><span class="hiero-meaning">القدم</span><span class="hiero-sound">صوت: ب — رمز السفر والانطلاق</span></div>
+      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓅓</span><span class="hiero-meaning">البومة</span><span class="hiero-sound">صوت: م — رمز الحكمة والرؤية الليلية</span></div>
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓈖</span><span class="hiero-meaning">تموّج الماء</span><span class="hiero-sound">صوت: ن — رمز النيل والحياة</span></div>
+      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓇳</span><span class="hiero-meaning">قرص الشمس — آتون</span><span class="hiero-sound">رمز آتون — الشمس في أوج تألقها</span></div>
+      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓋀</span><span class="hiero-meaning">التاج الأبيض — حجت</span><span class="hiero-sound">تاج مصر العليا — رمز الجنوب</span></div>
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓋖</span><span class="hiero-meaning">التاج الأحمر — دشرت</span><span class="hiero-sound">تاج مصر السفلى — رمز الشمال</span></div>
+      <div class="hiero-card reveal reveal-delay-1"><span class="hiero-symbol">𓏏</span><span class="hiero-meaning">رغيف الخبز</span><span class="hiero-sound">صوت: ت — رمز الطعام والحياة اليومية</span></div>
+      <div class="hiero-card reveal reveal-delay-2"><span class="hiero-symbol">𓂧</span><span class="hiero-meaning">اليد</span><span class="hiero-sound">صوت: د — رمز العطاء والقوة</span></div>
+      <div class="hiero-card reveal"><span class="hiero-symbol">𓂋</span><span class="hiero-meaning">الفم</span><span class="hiero-sound">صوت: ر — رمز الكلام والإعلان</span></div>
+    </div>
+
+    <!-- معلومات حجر رشيد -->
+    <div style="text-align:center; margin-top:3rem; padding: 2rem; background:rgba(201,168,76,0.05); border:1px solid rgba(201,168,76,0.2); border-radius:6px; max-width:800px; margin-left:auto; margin-right:auto;" class="reveal">
+      <h4 style="font-family:'Cinzel',serif;color:var(--gold);font-size:1.1rem;margin-bottom:1rem;">حجر رشيد — مفتاح الحضارة المفقودة</h4>
+      <p style="color:var(--gold-light); font-size:1rem; line-height:1.9; margin-bottom:1rem;">
+        اكتُشف عام 1799 خلال الحملة الفرنسية على مصر — حجر كُتب عليه نفس النص بثلاث لغات: الهيروغليفية والديموطيقية واليونانية. فكّ العالم الفرنسي جان فرانسوا شامبليون رموز الهيروغليفية عام 1822 بفضل هذا الحجر.
       </p>
+      <p style="color:var(--sand); opacity:0.7; font-size:0.9rem; line-height:1.8;">
+        يحمل الحجر مرسوم كهنة ممفيس عام 196 ق.م في عهد بطليموس الخامس — اقتنى الإنجليز الأصل وهو الآن في المتحف البريطاني، بينما تطالب مصر بإعادته.
+      </p>
+    </div>
+
+    <!-- أنواع الكتابة المصرية -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:3rem 0 1rem;font-size:1.1rem;">✦ أنواع الكتابة في مصر القديمة ✦</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;max-width:900px;margin:0 auto;" class="reveal">
+      <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:5px;padding:1.2rem;text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:0.5rem;">𓂀</span>
+        <strong style="color:var(--gold);font-family:'Cinzel',serif;font-size:0.95rem;">الهيروغليفية</strong>
+        <p style="color:var(--sand);opacity:0.7;font-size:0.82rem;margin-top:0.5rem;line-height:1.6;">الكتابة الرسمية المقدسة — للمعابد والمقابر والنصب الملكية. أكثر من 700 رمز.</p>
+      </div>
+      <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:5px;padding:1.2rem;text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:0.5rem;">📜</span>
+        <strong style="color:var(--gold);font-family:'Cinzel',serif;font-size:0.95rem;">الهيراطيقية</strong>
+        <p style="color:var(--sand);opacity:0.7;font-size:0.82rem;margin-top:0.5rem;line-height:1.6;">نسخة مبسطة مكتوبة بالقلم — استُخدمت في الوثائق الإدارية والدينية والأدبية.</p>
+      </div>
+      <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:5px;padding:1.2rem;text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:0.5rem;">📝</span>
+        <strong style="color:var(--gold);font-family:'Cinzel',serif;font-size:0.95rem;">الديموطيقية</strong>
+        <p style="color:var(--sand);opacity:0.7;font-size:0.82rem;margin-top:0.5rem;line-height:1.6;">الكتابة الشعبية في العصر المتأخر والبطلمي — للتجارة والعقود والحياة اليومية.</p>
+      </div>
+      <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:5px;padding:1.2rem;text-align:center;">
+        <span style="font-size:2rem;display:block;margin-bottom:0.5rem;">✝️</span>
+        <strong style="color:var(--gold);font-family:'Cinzel',serif;font-size:0.95rem;">القبطية</strong>
+        <p style="color:var(--sand);opacity:0.7;font-size:0.82rem;margin-top:0.5rem;line-height:1.6;">آخر مراحل اللغة المصرية — أبجدية يونانية معدّلة، لا تزال تُستخدم في الكنيسة القبطية.</p>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- ═══════════════════════════════════════════════
-     قسم 6 — إنجازات علمية وحضارية
+     قسم 5.5 — المعابد المصرية
 ════════════════════════════════════════════════ -->
+<section id="temples" style="background:linear-gradient(180deg,#0A0500 0%,#150A00 100%);max-width:100%;padding:5rem 2rem;border-top:1px solid rgba(201,168,76,0.1);">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 class="section-title reveal">معابد مصر القديمة</h2>
+    <div class="divider reveal"></div>
+    <p class="section-subtitle reveal">شيّد المصريون القدماء مئات المعابد عبر آلاف السنين — كلٌّ منها رسالة حجرية خالدة تروي قصة إله وفرعون وحضارة.</p>
+
+    <div class="temples-grid">
+      <div class="temple-card reveal">
+        <span class="temple-location">الكرنك — الأقصر</span>
+        <div class="temple-name">مجمع معابد الكرنك</div>
+        <div class="temple-period">2055 ق.م — 200 م | أكثر من 2000 سنة بناء</div>
+        <p class="temple-desc">أضخم مجمع معبدي في العالم القديم بمساحة 200 فدان — قاعة الأعمدة الكبرى بـ 134 عموداً تُعدّ من أجمل ما بناه الإنسان على الإطلاق. بناه أكثر من 30 فرعوناً عبر القرون.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون — موت — خونسو</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-1">
+        <span class="temple-location">الأقصر — مصر العليا</span>
+        <div class="temple-name">معبد الأقصر</div>
+        <div class="temple-period">1390 – 1213 ق.م | أمنحتب الثالث ورمسيس الثاني</div>
+        <p class="temple-desc">بُني للاحتفالات الملكية وأعياد أوبت — واجهته الشهيرة بمسلّتين وتماثيل رمسيس. طريق الكباش المقدس يربطه بالكرنك. إحدى مسلّتيه الآن في ميدان الكونكورد بباريس.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون — موت — خونسو</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-2">
+        <span class="temple-location">أبو سمبل — النوبة</span>
+        <div class="temple-name">معبد أبو سمبل الكبير</div>
+        <div class="temple-period">1264 – 1244 ق.م | رمسيس الثاني</div>
+        <p class="temple-desc">نُحت في الصخر الحي بالكامل لتخليد انتصار رمسيس في قادش. أربعة تماثيل عملاقة بارتفاع 20م. تعامد الشمس على وجه رمسيس مرتين سنوياً ظاهرة فلكية مدهشة.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون — رع حوراختي — بتاح — رمسيس</span>
+      </div>
+      <div class="temple-card reveal">
+        <span class="temple-location">الدير البحري — الأقصر</span>
+        <div class="temple-name">معبد حتشبسوت (الدير البحري)</div>
+        <div class="temple-period">1479 – 1458 ق.م | الملكة حتشبسوت</div>
+        <p class="temple-desc">تحفة معمارية فريدة بمصطباتها الثلاث المتدرجة في قلب الجبل. نقوشه تروي قصة رحلة بونت التجارية الشهيرة وإنجازات حتشبسوت. أروع مثال على المعبد الجنائزي.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون — حتحور — أنوبيس</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-1">
+        <span class="temple-location">فيلة — أسوان</span>
+        <div class="temple-name">معبد فيلة</div>
+        <div class="temple-period">380 ق.م — 550 م | البطالمة والرومان</div>
+        <p class="temple-desc">جوهرة النيل العائمة — آخر معبد مصري قديم ظل يُستخدم حتى القرن السادس الميلادي. نُقل حجراً حجراً لإنقاذه من مياه السد العالي. مُكرَّس لإيزيس وسحرها العجيب.</p>
+        <span class="temple-deity">مُكرَّس لـ: إيزيس — حورس — أوزيريس</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-2">
+        <span class="temple-location">إدفو — مصر العليا</span>
+        <div class="temple-name">معبد إدفو</div>
+        <div class="temple-period">237 – 57 ق.م | البطالمة</div>
+        <p class="temple-desc">أكمل معبد مصري باقٍ حتى اليوم — حوفظ عليه بدرجة استثنائية. صرحه الضخم يُعدّ الأضخم في مصر بعد الكرنك. نصوصه تضم نسخاً نادرة من أساطير حورس وست.</p>
+        <span class="temple-deity">مُكرَّس لـ: حورس الإيدفوي</span>
+      </div>
+      <div class="temple-card reveal">
+        <span class="temple-location">دندرة — قنا</span>
+        <div class="temple-name">معبد دندرة</div>
+        <div class="temple-period">54 ق.م — 14 م | البطالمة والرومان</div>
+        <p class="temple-desc">يُشتهر بمصنّفه الفلكي "دائرة دندرة" على سقفه — أقدم خريطة فلكية كاملة في العالم القديم. نقوشه الملوّنة محفوظة بشكل مذهل. يضم صالة الأعياد الشهيرة.</p>
+        <span class="temple-deity">مُكرَّس لـ: حتحور — إله الحب والجمال</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-1">
+        <span class="temple-location">أبيدوس — سوهاج</span>
+        <div class="temple-name">معبد أبيدوس (سيتي الأول)</div>
+        <div class="temple-period">1290 ق.م | سيتي الأول ورمسيس الثاني</div>
+        <p class="temple-desc">أحد أقدس الأماكن في مصر القديمة — يُعتقد أن رأس أوزيريس دُفنت فيه. يحتوي على لائحة أبيدوس الشهيرة التي تُسمّي 76 فرعوناً. نقوشه من أجمل ما خلّفته مصر.</p>
+        <span class="temple-deity">مُكرَّس لـ: أوزيريس وسبعة آلهة أخرى</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-2">
+        <span class="temple-location">المدينة هابو — الأقصر</span>
+        <div class="temple-name">معبد مدينة هابو</div>
+        <div class="temple-period">1184 – 1153 ق.م | رمسيس الثالث</div>
+        <p class="temple-desc">أفضل نموذج للمعبد الجنائزي الملكي — جدرانه مغطاة بنقوش تروي انتصار رمسيس الثالث على شعوب البحر. حصنه يُعدّ الوحيد الباقي من الدولة الحديثة.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون — الفرعون الإله</span>
+      </div>
+      <div class="temple-card reveal">
+        <span class="temple-location">منف — الجيزة</span>
+        <div class="temple-name">معبد الوادي (خفرع)</div>
+        <div class="temple-period">2550 ق.م | خفرع</div>
+        <p class="temple-desc">أقدم معبد حجري في مصر ما زال قائماً — مُجاور لأبي الهول يُعتقد أنه مكان التحنيط الملكي. مبنيٌّ بكتل الجرانيت الوردي الضخمة. يُعدّ معجزة هندسية في حد ذاته.</p>
+        <span class="temple-deity">مُكرَّس لـ: رع حوراختي — حورس</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-1">
+        <span class="temple-location">الرامسيوم — الأقصر</span>
+        <div class="temple-name">الرامسيوم</div>
+        <div class="temple-period">1279 – 1213 ق.م | رمسيس الثاني</div>
+        <p class="temple-desc">المعبد الجنائزي لرمسيس الثاني — تمثاله المنهار الضخم (18م ارتفاعاً) ألهم الشاعر الإنجليزي شيلي قصيدته الشهيرة "أوزيماندياس". كان مدينةً ومكتبةً ومستودعاً.</p>
+        <span class="temple-deity">مُكرَّس لـ: آمون رع — رمسيس المؤلّه</span>
+      </div>
+      <div class="temple-card reveal reveal-delay-2">
+        <span class="temple-location">الهرم المدرّج — سقارة</span>
+        <div class="temple-name">مجمع زوسر — سقارة</div>
+        <div class="temple-period">2650 ق.م | زوسر — المهندس إيمحوتب</div>
+        <p class="temple-desc">أقدم مبنى حجري ضخم في العالم — صمّمه المعماري العبقري إيمحوتب. الهرم المدرّج الأول في التاريخ بـ6 درجات. المجمع المحيط به نموذج للمدينة الأبدية الكاملة.</p>
+        <span class="temple-deity">مُكرَّس لـ: الفرعون زوسر في حياته الأبدية</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     قسم الآثار
+════════════════════════════════════════════════ -->
+<div class="artifacts-section" id="artifacts">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;">
+    <h2 class="section-title reveal">أشهر الآثار المصرية</h2>
+    <div class="divider reveal"></div>
+    <p class="section-subtitle reveal">كنوز الإنسانية الخالدة — قطع أثرية أذهلت العالم وكشفت أسرار حضارة عمرها سبعة آلاف عام.</p>
+
+    <div class="artifacts-grid">
+      <div class="artifact-card reveal">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjMwIiB5PSI0NSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUwIiByeD0iMyIgZmlsbD0iI0M5QTg0QyIvPgogIDxyZWN0IHg9IjMwIiB5PSI0NSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUwIiByeD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZENzAwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjQwIiByeD0iMjIiIHJ5PSIyNiIgZmlsbD0iI0ZGRDcwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjQwIiByeD0iMTkiIHJ5PSIyMyIgZmlsbD0iI0M5QTg0QyIvPgogIDxsaW5lIHgxPSIyOCIgeTE9IjQ1IiB4Mj0iNzIiIHkyPSI0NSIgc3Ryb2tlPSIjRkZENzAwIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8ZyBmaWxsPSIjMUI0RjcyIj4KICAgIDxyZWN0IHg9IjMxIiB5PSI0OCIgd2lkdGg9IjM4IiBoZWlnaHQ9IjUiIG9wYWNpdHk9IjAuOCIvPgogICAgPHJlY3QgeD0iMzEiIHk9IjU3IiB3aWR0aD0iMzgiIGhlaWdodD0iNSIgb3BhY2l0eT0iMC43Ii8+CiAgICA8cmVjdCB4PSIzMSIgeT0iNjYiIHdpZHRoPSIzOCIgaGVpZ2h0PSI1IiBvcGFjaXR5PSIwLjYiLz4KICAgIDxyZWN0IHg9IjMxIiB5PSI3NSIgd2lkdGg9IjM4IiBoZWlnaHQ9IjUiIG9wYWNpdHk9IjAuNSIvPgogICAgPHJlY3QgeD0iMzEiIHk9Ijg0IiB3aWR0aD0iMzgiIGhlaWdodD0iNSIgb3BhY2l0eT0iMC40Ii8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjQzIiBjeT0iMzYiIHI9IjQuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjU3IiBjeT0iMzYiIHI9IjQuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMzUiIHI9IjIiIGZpbGw9IiM1REFERTIiLz4KICA8Y2lyY2xlIGN4PSI1OCIgY3k9IjM1IiByPSIyIiBmaWxsPSIjNURBREUyIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNDMiIHJ4PSI2IiByeT0iMyIgZmlsbD0iI0Q0QTgzMCIvPgogIDxwYXRoIGQ9Ik00NCwzOSBRNTAsNDIgNTYsMzkiIHN0cm9rZT0iI0ZGRDcwMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGZpbGw9Im5vbmUiLz4KICA8cmVjdCB4PSI0NCIgeT0iMTUiIHdpZHRoPSIxMiIgaGVpZ2h0PSIyMCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC45Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI0NCwxNSA1NiwxNSA1Miw4IDQ4LDgiIGZpbGw9IiNGRkQ3MDAiIG9wYWNpdHk9IjAuOCIvPgo8L3N2Zz4=" alt="قناع توت" loading="lazy"></span>
+        <div class="artifact-name">قناع توت عنخ آمون الذهبي</div>
+        <span class="artifact-museum">المتحف المصري الكبير — الجيزة</span>
+        <p class="artifact-desc">أشهر قطعة أثرية في العالم — مصنوع من الذهب الخالص والزجاج واللازورد. وجه الفتى الملك يُجسّد جمال الفن المصري في ذروته.</p>
+        <span class="artifact-date">1323 ق.م — اكتُشف 1922</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-1">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjE1IiB5PSI4IiB3aWR0aD0iNzAiIGhlaWdodD0iODUiIHJ4PSI0IiBmaWxsPSIjM0QzNTMwIi8+CiAgPHJlY3QgeD0iMTUiIHk9IjgiIHdpZHRoPSI3MCIgaGVpZ2h0PSI4NSIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iMTUiIHkxPSIzNyIgeDI9Ijg1IiB5Mj0iMzciIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSIxNSIgeTE9IjY1IiB4Mj0iODUiIHkyPSI2NSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjI1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjgiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCI+8JOCgPCThqPimKXwk4u0PC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSIzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciPvCThpnwk4eL8JOBufCTg4A8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9IjUyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjciIGZpbGw9IiNENEMwODAiIG9wYWNpdHk9IjAuOCIgZm9udC1zdHlsZT0iaXRhbGljIj7wk4+P8JOIlvCThZPwk4KLPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2LjUiIGZpbGw9IiNENEMwODAiIG9wYWNpdHk9IjAuNyIgZm9udC1zdHlsZT0iaXRhbGljIj7wk4S/8JOKqvCTjpvwk5CNPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI3NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3IiBmaWxsPSIjRThFMEMwIiBvcGFjaXR5PSIwLjgiPs6SzpHOo86ZzpvOlc6lzqM8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9Ijg0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjciIGZpbGw9IiNFOEUwQzAiIG9wYWNpdHk9IjAuNyI+zqDOpM6fzpvOlc6czpHOmc6fzqM8L3RleHQ+Cjwvc3ZnPg==" alt="حجر رشيد" loading="lazy"></span>
+        <div class="artifact-name">حجر رشيد</div>
+        <span class="artifact-museum">المتحف البريطاني — لندن (مطالب بإعادته)</span>
+        <p class="artifact-desc">مفتاح فك رموز الهيروغليفية — نص ثلاثي اللغة كشف سر الحضارة المصرية لشامبليون عام 1822 بعد آلاف السنين من الصمت.</p>
+        <span class="artifact-date">196 ق.م — اكتُشف 1799</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-2">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjUyIiByeD0iMzAiIHJ5PSI0MCIgZmlsbD0iIzRBOEMzRiIgb3BhY2l0eT0iMC44NSIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjUyIiByeD0iMjciIHJ5PSIzNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIxOCIgcj0iMTAiIGZpbGw9IiM0QThDM0YiIG9wYWNpdHk9IjAuOSIvPgogIDxjaXJjbGUgY3g9IjM1IiBjeT0iMjIiIHI9IjYiIGZpbGw9IiM0QThDM0YiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjY1IiBjeT0iMjIiIHI9IjYiIGZpbGw9IiM0QThDM0YiIG9wYWNpdHk9IjAuOCIvPgogIDx0ZXh0IHg9IjUwIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzlBODRDIj7wk4aZPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzlBODRDIj7wk4KAPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI2MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjQzlBODRDIj7wk4u0PC90ZXh0PgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjcwIiByeD0iMTgiIHJ5PSIxMCIgZmlsbD0iIzNBNkMyRiIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPg==" alt="لوحة نارمر" loading="lazy"></span>
+        <div class="artifact-name">لوحة نارمر</div>
+        <span class="artifact-museum">المتحف المصري — القاهرة</span>
+        <p class="artifact-desc">أقدم وثيقة سياسية في التاريخ — تُصوّر توحيد مصر العليا والسفلى على يد الملك نارمر (مينا). حجر الصخير الأخضر نُقش على وجهيه قبل 5100 سنة.</p>
+        <span class="artifact-date">3100 ق.م</span>
+      </div>
+      <div class="artifact-card reveal">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjIyIiB5PSIxMiIgd2lkdGg9IjU2IiBoZWlnaHQ9Ijc4IiByeD0iMiIgZmlsbD0iI0Y1RTZDOCIvPgogIDxyZWN0IHg9IjIyIiB5PSIxMiIgd2lkdGg9IjU2IiBoZWlnaHQ9Ijc4IiByeD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMTgiIHk9IjE2IiB3aWR0aD0iNiIgaGVpZ2h0PSI3MCIgcng9IjMiIGZpbGw9IiNENEI4OTYiLz4KICA8cmVjdCB4PSI3NiIgeT0iMTYiIHdpZHRoPSI2IiBoZWlnaHQ9IjcwIiByeD0iMyIgZmlsbD0iI0Q0Qjg5NiIvPgogIDx0ZXh0IHg9IjUwIiB5PSIyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2LjUiIGZpbGw9IiM4QjQ1MTMiIG9wYWNpdHk9IjAuOSI+8JOCgPCThqPimKXwk4u08JOGmTwvdGV4dD4KICA8dGV4dCB4PSI1MCIgeT0iMzQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNi41IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjgiPvCTh4vwk4G58JODgPCThZPwk4iWPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI0MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2LjUiIGZpbGw9IiM4QjQ1MTMiIG9wYWNpdHk9IjAuNyI+8JOHs/CTi4Dwk4+P8JOFsfCThpE8L3RleHQ+CiAgPGxpbmUgeDE9IjI4IiB5MT0iNDgiIHgyPSI3MiIgeTI9IjQ4IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC41Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjU4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjYiIGZpbGw9IiM4QjQ1MTMiIG9wYWNpdHk9IjAuNyI+8JOEv/CTgp3wk4u08JOJlPCTjps8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9IjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjYiIGZpbGw9IiM4QjQ1MTMiIG9wYWNpdHk9IjAuNjUiPvCTkI3wk4Sh8JOImfCTjqHwk46iPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI3NCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjYiPvCTjrzwk4+P8JONv/CTgqfwk4aTPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI4MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI2IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjU1Ij7wk4Wx8JOHjPCThL/wk4eL8JOCnTwvdGV4dD4KPC9zdmc+" alt="بردية إيبرس" loading="lazy"></span>
+        <div class="artifact-name">بردية إيبرس الطبية</div>
+        <span class="artifact-museum">جامعة لايبزيغ — ألمانيا</span>
+        <p class="artifact-desc">أقدم دليل طبي في التاريخ — 110 صفحات تصف 700 وصفة ومرض وعلاج. دليل على تقدم المصريين في الطب والجراحة قبل 3500 سنة.</p>
+        <span class="artifact-date">1550 ق.م</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-1">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjIiIHI9IjEyIiBmaWxsPSIjQzlBODRDIi8+CiAgPHJlY3QgeD0iMzAiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iMjAiIHJ4PSIzIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjI1LDU0IDc1LDU0IDcwLDgwIDMwLDgwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHJlY3QgeD0iMzAiIHk9IjM0IiB3aWR0aD0iNDAiIGhlaWdodD0iNCIgZmlsbD0iI0Q0QTgzMCIvPgogIDxjaXJjbGUgY3g9IjQ1IiBjeT0iMjAiIHI9IjMuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjU1IiBjeT0iMjAiIHI9IjMuNSIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjQ2IiBjeT0iMTkuNSIgcj0iMS41IiBmaWxsPSIjNURBREUyIi8+CiAgPGNpcmNsZSBjeD0iNTYiIGN5PSIxOS41IiByPSIxLjUiIGZpbGw9IiM1REFERTIiLz4KICA8bGluZSB4MT0iMjAiIHkxPSI0MCIgeDI9IjMwIiB5Mj0iMzgiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iNzAiIHkxPSIzOCIgeDI9IjgwIiB5Mj0iNDAiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cmVjdCB4PSIzNSIgeT0iNDIiIHdpZHRoPSIzMCIgaGVpZ2h0PSI4IiByeD0iMSIgZmlsbD0iI0Y1RTZDOCIgb3BhY2l0eT0iMC45Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjQ5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjYiIGZpbGw9IiM4QjQ1MTMiPvCTgoDwk4aj4pilPC90ZXh0PgogIDxsaW5lIHgxPSI3NSIgeTE9IjQwIiB4Mj0iODUiIHkyPSIzMiIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8Y2lyY2xlIGN4PSI4NiIgY3k9IjMxIiByPSIyIiBmaWxsPSIjQzlBODRDIi8+Cjwvc3ZnPg==" alt="الكاتب الجالس" loading="lazy"></span>
+        <div class="artifact-name">تمثال الكاتب الجالس</div>
+        <span class="artifact-museum">متحف اللوفر — باريس</span>
+        <p class="artifact-desc">من أجمل تماثيل مصر القديمة — كاتب جالس بعيون مُرصّعة بالكريستال تبدو حيّة. يُجسّد مهارة النحاتين المصريين في إيقاظ الحياة في الحجر.</p>
+        <span class="artifact-date">2500 ق.م — الأسرة الخامسة</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-2">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ib2Jnb2xkIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI0M5QTg0QyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjRkZENzAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjQzlBODRDIi8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMxQTBBMDAiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDggNTgsMjAgNDIsMjAiIGZpbGw9IiNGRkQ3MDAiIG9wYWNpdHk9IjAuOTUiLz4KICA8cmVjdCB4PSI0MiIgeT0iMTgiIHdpZHRoPSIxNiIgaGVpZ2h0PSI3MCIgZmlsbD0idXJsKCNvYmdvbGQpIi8+CiAgPHJlY3QgeD0iNDAiIHk9Ijg2IiB3aWR0aD0iMjAiIGhlaWdodD0iOCIgcng9IjIiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOSIvPgogIDx0ZXh0IHg9IjUwIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI4IiBmaWxsPSIjOEI2OTE0Ij7wk4KAPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI4IiBmaWxsPSIjOEI2OTE0Ij7wk4ajPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI2MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI4IiBmaWxsPSIjOEI2OTE0Ij7imKU8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9Ijc0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjgiIGZpbGw9IiM4QjY5MTQiPvCTi7Q8L3RleHQ+CiAgPGxpbmUgeDE9IjMwIiB5MT0iOTIiIHgyPSI3MCIgeTI9IjkyIiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjwvc3ZnPg==" alt="مسلة حتشبسوت" loading="lazy"></span>
+        <div class="artifact-name">مسلة حتشبسوت</div>
+        <span class="artifact-museum">معبد الكرنك — الأقصر</span>
+        <p class="artifact-desc">أطول مسلة في مصر (29.6م) — نُحتت من قطعة جرانيت واحدة وغُلّفت قمتها بالإليكتروم (ذهب وفضة). تحمل نقوشاً تُخلّد إنجازات الملكة حتشبسوت.</p>
+        <span class="artifact-date">1467 ق.م</span>
+      </div>
+      <div class="artifact-card reveal">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjcwIiByeD0iMTgiIHJ5PSIyMiIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjQyIiByeD0iMTYiIHJ5PSIxOCIgZmlsbD0iI0Q0QTgzMCIvPgogIDxyZWN0IHg9IjM2IiB5PSIyNSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjMwIiByeD0iMiIgZmlsbD0iIzFCNEY3MiIgb3BhY2l0eT0iMC45Ii8+CiAgPHJlY3QgeD0iMzgiIHk9IjI3IiB3aWR0aD0iMjQiIGhlaWdodD0iMyIgZmlsbD0iIzVEQURFMiIgb3BhY2l0eT0iMC43Ii8+CiAgPHJlY3QgeD0iMzgiIHk9IjMyIiB3aWR0aD0iMjQiIGhlaWdodD0iMiIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMzgiIHk9IjM2IiB3aWR0aD0iMjQiIGhlaWdodD0iMiIgZmlsbD0iIzVEQURFMiIgb3BhY2l0eT0iMC41Ii8+CiAgPGNpcmNsZSBjeD0iNDQiIGN5PSI0NCIgcj0iNCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjU2IiBjeT0iNDQiIHI9IjQiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI0NSIgY3k9IjQzIiByPSIxLjgiIGZpbGw9IiNDOUE4NEMiLz4KICA8Y2lyY2xlIGN4PSI1NyIgY3k9IjQzIiByPSIxLjgiIGZpbGw9IiNDOUE4NEMiLz4KICA8cGF0aCBkPSJNNDQsNTAgUTUwLDU0IDU2LDUwIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBmaWxsPSJub25lIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNTciIHJ4PSIxMiIgcnk9IjYiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNyIvPgogIDxyZWN0IHg9IjQwIiB5PSIxNiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCIvPgogIDxyZWN0IHg9IjQyIiB5PSIxMyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjMiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNiIvPgo8L3N2Zz4=" alt="نفرتيتي" loading="lazy"></span>
+        <div class="artifact-name">تمثال نفرتيتي</div>
+        <span class="artifact-museum">متحف نيوس — برلين (مطالب بإعادته)</span>
+        <p class="artifact-desc">واحدة من أشهر القطع الأثرية في العالم — رأس تمثال الملكة نفرتيتي بألوانه الحية المحفوظة. مثال على فن النحت الواقعي في عهد أخناتون.</p>
+        <span class="artifact-date">1345 ق.م — اكتُشف 1912</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-1">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcyIiByeD0iMyIgZmlsbD0iI0Y1RTZDOCIvPgogIDxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjcwIiBoZWlnaHQ9IjcyIiByeD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cmVjdCB4PSIxMyIgeT0iMTgiIHdpZHRoPSI2IiBoZWlnaHQ9IjY1IiByeD0iMyIgZmlsbD0iI0Q0Qjg5NiIvPgogIDxyZWN0IHg9IjgxIiB5PSIxOCIgd2lkdGg9IjYiIGhlaWdodD0iNjUiIHJ4PSIzIiBmaWxsPSIjRDRCODk2Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iMzgiIHJ4PSIxOCIgcnk9IjEyIiBmaWxsPSIjMUI0RjcyIiBvcGFjaXR5PSIwLjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjM4IiByeD0iNiIgcj0iNiIgZmlsbD0iI0Y1RjVEQyIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTM1LDM4IFE1MCwyNiA2NSwzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPHRleHQgeD0iNTAiIHk9IjMyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjkiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCI+8JOCgDwvdGV4dD4KICA8bGluZSB4MT0iMjIiIHkxPSI1MiIgeDI9Ijc4IiB5Mj0iNTIiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSI1MCIgeT0iNjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iNyIgZmlsbD0iIzhCNDUxMyIgb3BhY2l0eT0iMC44Ij7wk4aj8JOBueKYpfCTi7Twk4aZPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI3MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjciPvCTh4vwk4OA8JOFk/CTiJbwk4ezPC90ZXh0PgogIDx0ZXh0IHg9IjUwIiB5PSI3OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjYiPvCTi4Dwk4+P8JOFsfCThpHwk4S/PC90ZXh0Pgo8L3N2Zz4=" alt="كتاب الموتى" loading="lazy"></span>
+        <div class="artifact-name">كتاب الموتى</div>
+        <span class="artifact-museum">متاحف عدة حول العالم</span>
+        <p class="artifact-desc">دليل الأرواح إلى الآخرة — مجموعة تعاويذ وصور ترشد الميت في رحلته عبر الدوات (العالم السفلي). كُتب على برديات توضع في المقابر الملكية.</p>
+        <span class="artifact-date">1550 – 50 ق.م</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-2">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxnPgogICAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iNzIiIHJ4PSI5IiByeT0iMjAiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuODUiLz4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iNTAiIHI9IjkiIGZpbGw9IiNDOUE4NEMiLz4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iNDgiIHI9IjciIGZpbGw9IiNENEE4MzAiLz4KICAgIDx0ZXh0IHg9IjIwIiB5PSI1MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI4IiBmaWxsPSIjOEI2OTE0Ij7wk4KAPC90ZXh0PgogIDwvZz4KICA8Zz4KICAgIDxlbGxpcHNlIGN4PSIzOCIgY3k9Ijc0IiByeD0iOSIgcnk9IjIwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgICA8Y2lyY2xlIGN4PSIzOCIgY3k9IjUyIiByPSI5IiBmaWxsPSIjQzlBODRDIi8+CiAgICA8ZWxsaXBzZSBjeD0iMzgiIGN5PSI0OCIgcng9IjgiIHJ5PSI2IiBmaWxsPSIjNkI5RTQ1Ii8+CiAgICA8ZWxsaXBzZSBjeD0iMzUiIGN5PSI0NiIgcng9IjMiIHJ5PSI1IiBmaWxsPSIjNUQ4QTNDIi8+CiAgICA8ZWxsaXBzZSBjeD0iNDEiIGN5PSI0NiIgcng9IjMiIHJ5PSI1IiBmaWxsPSIjNUQ4QTNDIi8+CiAgPC9nPgogIDxnPgogICAgPGVsbGlwc2UgY3g9IjYyIiBjeT0iNzQiIHJ4PSI5IiByeT0iMjAiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuODUiLz4KICAgIDxjaXJjbGUgY3g9IjYyIiBjeT0iNTIiIHI9IjkiIGZpbGw9IiNDOUE4NEMiLz4KICAgIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjQ2IiByeD0iNyIgcnk9IjkiIGZpbGw9IiNENEE4MzAiLz4KICAgIDxjaXJjbGUgY3g9IjU4IiBjeT0iNDUiIHI9IjMiIGZpbGw9IiMxQTBBMDAiLz4KICAgIDxjaXJjbGUgY3g9IjY2IiBjeT0iNDUiIHI9IjMiIGZpbGw9IiMxQTBBMDAiLz4KICA8L2c+CiAgPGc+CiAgICA8ZWxsaXBzZSBjeD0iODAiIGN5PSI3MiIgcng9IjkiIHJ5PSIyMCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC44NSIvPgogICAgPGNpcmNsZSBjeD0iODAiIGN5PSI1MCIgcj0iOSIgZmlsbD0iI0M5QTg0QyIvPgogICAgPHBhdGggZD0iTTcyLDQ4IFE4MCw0MiA4OCw0OCBRODAsNTggNzIsNDhaIiBmaWxsPSIjNUQ4QTNDIi8+CiAgICA8Y2lyY2xlIGN4PSI3NyIgY3k9IjQ3IiByPSIyIiBmaWxsPSIjMUEwQTAwIi8+CiAgICA8Y2lyY2xlIGN4PSI4MyIgY3k9IjQ3IiByPSIyIiBmaWxsPSIjMUEwQTAwIi8+CiAgPC9nPgo8L3N2Zz4=" alt="أواني قانوب" loading="lazy"></span>
+        <div class="artifact-name">أواني القانوب الأربعة</div>
+        <span class="artifact-museum">المتحف المصري — القاهرة</span>
+        <p class="artifact-desc">أوانٍ جنائزية لحفظ أحشاء الميت المحنّطة تحت حماية أبناء حورس الأربعة: إمستي — حابي — دواموتف — قبح سنوف.</p>
+        <span class="artifact-date">2686 ق.م – 400 م</span>
+      </div>
+      <div class="artifact-card reveal">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjIwIiB5PSIxMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjgyIiByeD0iMiIgZmlsbD0iI0Y1RTZDOCIvPgogIDxyZWN0IHg9IjIwIiB5PSIxMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjgyIiByeD0iMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPHJlY3QgeD0iMTYiIHk9IjE0IiB3aWR0aD0iNiIgaGVpZ2h0PSI3NCIgcng9IjMiIGZpbGw9IiNENEI4OTYiLz4KICA8cmVjdCB4PSI3OCIgeT0iMTQiIHdpZHRoPSI2IiBoZWlnaHQ9Ijc0IiByeD0iMyIgZmlsbD0iI0Q0Qjg5NiIvPgogIDx0ZXh0IHg9IjUwIiB5PSIyNiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiM4QjQ1MTMiIG9wYWNpdHk9IjAuOSI+ViA9IMK9aChhwrIrYWIrYsKyKTwvdGV4dD4KICA8bGluZSB4MT0iMjUiIHkxPSIzMSIgeDI9Ijc1IiB5Mj0iMzEiIHN0cm9rZT0iIzhCNDUxMyIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjUiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDM4IDY1LDYwIDM1LDYwIiBmaWxsPSJub25lIiBzdHJva2U9IiM4QjQ1MTMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjgiLz4KICA8bGluZSB4MT0iNTAiIHkxPSIzOCIgeDI9IjUwIiB5Mj0iNjAiIHN0cm9rZT0iIzhCNDUxMyIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIzLDIiIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjUwIiB5PSI3MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI3IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjciPvCTgoDwk4aj4pil8JOLtPCTh7M8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9Ijc4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjYuNSIgZmlsbD0iIzhCNDUxMyIgb3BhY2l0eT0iMC42Ij7wk4aZ8JOHi/CTgbnwk4OA8JOFkzwvdGV4dD4KPC9zdmc+" alt="بردية موسكو" loading="lazy"></span>
+        <div class="artifact-name">بردية موسكو الرياضية</div>
+        <span class="artifact-museum">متحف موسكو للفنون الجميلة</span>
+        <p class="artifact-desc">أقدم وثيقة رياضية في التاريخ — تحل مسائل في الهندسة والحساب بما فيها حساب مساحة قطر كرة وحجم الهرم الناقص، قبل اليونان بألف عام.</p>
+        <span class="artifact-date">1850 ق.م</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-1">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxsaW5lIHgxPSIzNSIgeTE9Ijg1IiB4Mj0iNTUiIHkyPSIyMCIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik01NSwyMCBRNzAsMTAgNjgsMjUgUTY2LDM1IDU1LDM1IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGcgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAuOSI+CiAgICA8cmVjdCB4PSIzMCIgeT0iODMiIHdpZHRoPSIxMCIgaGVpZ2h0PSI1IiByeD0iMSIgZmlsbD0iIzhCNjkxNCIvPgogICAgPHJlY3QgeD0iMzIiIHk9Ijc2IiB3aWR0aD0iOCIgaGVpZ2h0PSI1IiByeD0iMSIgZmlsbD0iI0M5QTg0QyIvPgogICAgPHJlY3QgeD0iMzAiIHk9IjY5IiB3aWR0aD0iMTAiIGhlaWdodD0iNSIgcng9IjEiIGZpbGw9IiM4QjY5MTQiLz4KICA8L2c+CiAgPGxpbmUgeDE9IjYwIiB5MT0iODUiIHgyPSI2OCIgeTI9IjIwIiBzdHJva2U9IiNGRkQ3MDAiIHN0cm9rZS13aWR0aD0iNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGc+CiAgICA8bGluZSB4MT0iNjUiIHkxPSIzMiIgeDI9Ijc2IiB5Mj0iNDAiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogICAgPGxpbmUgeDE9IjY0IiB5MT0iNDIiIHgyPSI3OCIgeTI9IjQ2IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICAgIDxsaW5lIHgxPSI2NCIgeTE9IjUyIiB4Mj0iNzciIHkyPSI1MyIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="عصا توت" loading="lazy"></span>
+        <div class="artifact-name">عصا توت عنخ آمون وصولجانه</div>
+        <span class="artifact-museum">المتحف المصري الكبير — الجيزة</span>
+        <p class="artifact-desc">رمزا السلطة الملكية — عصا الراعي (هِقا) والمذبّة (نخاخا). كلاهما يُشير إلى الفرعون بوصفه راعي شعبه وحامي حدوده. من كنوز مقبرة توت.</p>
+        <span class="artifact-date">1323 ق.م</span>
+      </div>
+      <div class="artifact-card reveal reveal-delay-2">
+        <span class="artifact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDUiIHI9IjMwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkQ3MDAiIHN0cm9rZS13aWR0aD0iMyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDUiIHI9IjI1IiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8ZyBmaWxsPSIjRkZENzAwIj4KICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iMTYiIHI9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjcxIiBjeT0iMjQiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjgwIiBjeT0iNDUiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjcxIiBjeT0iNjYiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNzQiIHI9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjI5IiBjeT0iNjYiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iNDUiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjI5IiBjeT0iMjQiIHI9IjQiLz4KICA8L2c+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI0NSIgcj0iMTQiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDUiIHI9IjEwIiBmaWxsPSIjRkZENzAwIiBvcGFjaXR5PSIwLjkiLz4KICA8dGV4dCB4PSI1MCIgeT0iNDkiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM4QjY5MTQiPvCThqM8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9IjkyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjgiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNiI+8JOCgCDimKUg8JOLtDwvdGV4dD4KPC9zdmc+" alt="مجوهرات ذهبية" loading="lazy"></span>
+        <div class="artifact-name">خوذة شيشنق الذهبية</div>
+        <span class="artifact-museum">متحف القاهرة المصري</span>
+        <p class="artifact-desc">غطاء رأس ملكي ذهبي نادر — مثال رائع على الصناعة الذهبية في الأسرة الثانية والعشرين. يُجسّد جماليات فن الصياغة المصري في العصر المتأخر.</p>
+        <span class="artifact-date">945 – 924 ق.م</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     قسم الملوك الموسّع
+════════════════════════════════════════════════ -->
+<section class="kings-section" id="kings" style="background:linear-gradient(180deg,#0D0600 0%,#1A0A00 100%);max-width:100%;padding:5rem 2rem;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <h2 class="section-title reveal">موسوعة الملوك والفراعنة</h2>
+    <div class="divider reveal"></div>
+    <p class="section-subtitle reveal">من نارمر الموحّد إلى كليوباترا الأخيرة — رحلة عبر 31 أسرة حاكمة وأكثر من 170 فرعوناً شكّلوا تاريخ البشرية.</p>
+
+    <!-- الجدول الديناستي -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:2rem 0 1rem;font-size:1.05rem;">✦ جدول الأسر الفرعونية الكامل ✦</h3>
+    <div class="dynasty-table-wrap reveal">
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>الحقبة / الأسرة</th>
+            <th>الفترة الزمنية</th>
+            <th>العاصمة</th>
+            <th>أبرز الملوك</th>
+            <th>أهم الإنجازات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>عصر ما قبل الأسرات</td><td>7000 – 3100 ق.م</td><td>—</td><td>العقرب — كا — سمرخت</td><td>أولى القرى والزراعة — نقادة وبداري وأمراتية</td></tr>
+          <tr><td>الأسرة الأولى</td><td>3100 – 2890 ق.م</td><td>منف (ميمفيس)</td><td>نارمر — أحا — جر — واج — دن</td><td>توحيد مصر — لوحة نارمر — أول الكتابة</td></tr>
+          <tr><td>الأسرة الثانية</td><td>2890 – 2686 ق.م</td><td>منف</td><td>رانب — خعسخموي</td><td>استقرار الدولة — تطور الكتابة الهيراطيقية</td></tr>
+          <tr><td>الأسرة الثالثة — بداية الدولة القديمة</td><td>2686 – 2613 ق.م</td><td>منف</td><td>زوسر — سنفرو</td><td>أول هرم (الهرم المدرّج) — المعماري إيمحوتب</td></tr>
+          <tr><td>الأسرة الرابعة — عصر الأهرامات</td><td>2613 – 2494 ق.م</td><td>منف</td><td>خوفو — خفرع — منقرع</td><td>أهرامات الجيزة الثلاث — أبو الهول — ذروة الحضارة القديمة</td></tr>
+          <tr><td>الأسرة الخامسة</td><td>2494 – 2345 ق.م</td><td>منف</td><td>أوسركاف — ساحورع — أونا</td><td>معابد الشمس — متون الأهرام — ازدهار الفنون</td></tr>
+          <tr><td>الأسرة السادسة</td><td>2345 – 2181 ق.م</td><td>منف</td><td>تيتي — بيبي الأول — بيبي الثاني</td><td>حملات جنوب أفريقيا — أطول فرعون حكماً (بيبي الثاني 94 سنة)</td></tr>
+          <tr><td>عصر الانتقال الأول (الأسر 7-10)</td><td>2181 – 2055 ق.م</td><td>هيراكليوبوليس</td><td>أحتوي — ختي</td><td>تفكك الدولة — نهوض الأمراء الإقليميين</td></tr>
+          <tr><td>الأسرة الحادية عشرة — بداية الدولة الوسطى</td><td>2055 – 1985 ق.م</td><td>طيبة</td><td>منتوحتب الثاني</td><td>إعادة توحيد مصر — معبد الدير البحري الأول</td></tr>
+          <tr><td>الأسرة الثانية عشرة</td><td>1985 – 1773 ق.م</td><td>إيثتاوي</td><td>أمنمحات الأول — سنوسرت الثالث</td><td>ازدهار الأدب — غزو النوبة — تطور الزراعة والري</td></tr>
+          <tr><td>عصر الانتقال الثاني — الهكسوس (الأسر 13-17)</td><td>1773 – 1550 ق.م</td><td>أفاريس (هكسوس)</td><td>أبوفيس — ثيقن — كامس</td><td>غزو الهكسوس — تعلّم المصريين العربات والخيل</td></tr>
+          <tr><td>الأسرة الثامنة عشرة — بداية الدولة الحديثة</td><td>1550 – 1295 ق.م</td><td>طيبة</td><td>أحمس — تحتمس الثالث — حتشبسوت — أخناتون — توت</td><td>طرد الهكسوس — الإمبراطورية المصرية — ثورة أخناتون الدينية</td></tr>
+          <tr><td>الأسرة التاسعة عشرة</td><td>1295 – 1186 ق.م</td><td>بي-رعمسيس</td><td>سيتي الأول — رمسيس الثاني — مرنبتاح</td><td>أبو سمبل — معركة قادش — أول معاهدة سلام في التاريخ</td></tr>
+          <tr><td>الأسرة العشرون</td><td>1186 – 1069 ق.م</td><td>بي-رعمسيس</td><td>رمسيس الثالث — رمسيس الحادي عشر</td><td>هزيمة شعوب البحر — بدء تدهور الدولة</td></tr>
+          <tr><td>عصر الانتقال الثالث (الأسر 21-25)</td><td>1069 – 664 ق.م</td><td>تانيس / طيبة</td><td>سيامون — شيشنق — بيانخي</td><td>تقسيم الحكم — الكهنة والملوك — غزو الكوشيين</td></tr>
+          <tr><td>العصر المتأخر (الأسر 26-31)</td><td>664 – 332 ق.م</td><td>سايس / منف</td><td>بسماتيك — نخاو — نختانبو</td><td>نهضة الفنون — بناء أسطول بحري — الغزو الفارسي</td></tr>
+          <tr><td>الحقبة البطلمية</td><td>332 – 30 ق.م</td><td>الإسكندرية</td><td>الإسكندر — بطليموس الأول — كليوباترا</td><td>مكتبة الإسكندرية — ازدهار العلوم — نشر الحضارة في العالم</td></tr>
+          <tr><td>الحقبة الرومانية</td><td>30 ق.م – 641 م</td><td>الإسكندرية</td><td>أوكتافيان — ترايان — هادريان</td><td>مصر حبوب روما — ازدهار الإسكندرية — نشأة الكنيسة القبطية</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- أبرز الملوك الإضافيون -->
+    <h3 class="reveal" style="font-family:'Cinzel',serif;color:var(--gold-light);text-align:center;margin:3rem 0 1rem;font-size:1.05rem;">✦ ملوك لا تنسى ✦</h3>
+    <div class="kings-grid">
+      <div class="king-card reveal">
+        <div class="king-dynasty">الأسرة الثالثة — الدولة القديمة</div>
+        <div class="king-name">زوسر</div>
+        <div class="king-dates">2667 – 2648 ق.م</div>
+        <p class="king-note">الفرعون الذي أمر المهندس إيمحوتب ببناء الهرم المدرّج — أول مبنى حجري ضخم في التاريخ. ثوّر البناء بالحجر بدل الطوب.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-1">
+        <div class="king-dynasty">الأسرة الرابعة — الدولة القديمة</div>
+        <div class="king-name">خفرع</div>
+        <div class="king-dates">2558 – 2532 ق.م</div>
+        <p class="king-note">بنى الهرم الثاني والمعبد الجنائزي وأبا الهول العظيم — ويُعتقد أن وجه أبي الهول يحاكي ملامحه. جسّد السلطة الإلهية في أبهى صورها.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-2">
+        <div class="king-dynasty">الأسرة الحادية عشرة</div>
+        <div class="king-name">منتوحتب الثاني</div>
+        <div class="king-dates">2055 – 2004 ق.م</div>
+        <p class="king-note">أعاد توحيد مصر بعد فترة التفكك الأولى — أسّس الدولة الوسطى وبنى معبد الدير البحري الأول. يُعدّ أحد أعظم الملوك المغمورين.</p>
+      </div>
+      <div class="king-card reveal">
+        <div class="king-dynasty">الأسرة الثامنة عشرة</div>
+        <div class="king-name">أحمس الأول</div>
+        <div class="king-dates">1550 – 1525 ق.م</div>
+        <p class="king-note">محرّر مصر من الهكسوس — طردهم وأسّس الدولة الحديثة وبدأ عصر الإمبراطورية المصرية. موحّد مصر الثاني بعد نارمر.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-1">
+        <div class="king-dynasty">الأسرة الثامنة عشرة</div>
+        <div class="king-name">حتشبسوت</div>
+        <div class="king-dates">1479 – 1458 ق.م</div>
+        <p class="king-note">أعظم الملكات في التاريخ القديم — حكمت مصر فرعوناً كاملاً بالتاج المزدوج. بعثت بأعظم رحلة تجارية إلى بلاد بونت وشيّدت روائع معمارية خالدة.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-2">
+        <div class="king-dynasty">الأسرة الثامنة عشرة</div>
+        <div class="king-name">أمنحتب الثالث</div>
+        <div class="king-dates">1391 – 1353 ق.م</div>
+        <p class="king-note">عصره الذهبي الثاني — أطول فترة سلام في تاريخ مصر. بنى معبد الأقصر وتمثالَي ممنون. دبلوماسي بارع استغنى عن الحروب بالزواج السياسي.</p>
+      </div>
+      <div class="king-card reveal">
+        <div class="king-dynasty">الأسرة الثامنة عشرة</div>
+        <div class="king-name">أخناتون (أمنحتب الرابع)</div>
+        <div class="king-dates">1353 – 1336 ق.م</div>
+        <p class="king-note">أول موحّد ديني في التاريخ — ألغى الآلهة ونصّب آتون (قرص الشمس) إلهاً واحداً. بنى عاصمة جديدة (أخيتاتون). زوجته نفرتيتي وابنه توت عنخ آمون.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-1">
+        <div class="king-dynasty">الأسرة التاسعة عشرة</div>
+        <div class="king-name">سيتي الأول</div>
+        <div class="king-dates">1294 – 1279 ق.م</div>
+        <p class="king-note">نقوش معبده في أبيدوس من أجمل ما خلّفته مصر — أب رمسيس الثاني وصانع عظمته. أعاد مصر قوّةً عسكرية بعد ضعف ما بعد أخناتون.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-2">
+        <div class="king-dynasty">الأسرة العشرون</div>
+        <div class="king-name">رمسيس الثالث</div>
+        <div class="king-dates">1186 – 1155 ق.م</div>
+        <p class="king-note">آخر الفراعنة العظماء — هزم شعوب البحر الغازية وأنقذ مصر من الانهيار. قُتل في مؤامرة الحريم الشهيرة ولكنه أخمدها قبل موته.</p>
+      </div>
+      <div class="king-card reveal">
+        <div class="king-dynasty">الأسرة السادسة والعشرون</div>
+        <div class="king-name">بسماتيك الأول</div>
+        <div class="king-dates">664 – 610 ق.م</div>
+        <p class="king-note">مؤسس عصر النهضة المتأخرة (الأسرة الصاوية) — طرد الآشوريين وأعاد استقلال مصر وعظمتها الفنية. فتح مصر أمام التجارة اليونانية.</p>
+      </div>
+      <div class="king-card reveal reveal-delay-1">
+        <div class="king-dynasty">الأسرة البطلمية</div>
+        <div class="king-name">بطليموس الأول سوتر</div>
+        <div class="king-dates">305 – 283 ق.م</div>
+        <p class="king-note">مؤسس الأسرة البطلمية — قائد الإسكندر الأكبر الذي أصبح ملك مصر. أسّس مكتبة الإسكندرية والمتحف (أول أكاديمية علمية في العالم).</p>
+      </div>
+      <div class="king-card reveal reveal-delay-2">
+        <div class="king-dynasty">الأسرة البطلمية — نهاية الحقبة الفرعونية</div>
+        <div class="king-name">كليوباترا السابعة</div>
+        <div class="king-dates">51 – 30 ق.م</div>
+        <p class="king-note">آخر ملوك مصر الفرعونية وأذكاهم — أتقنت 9 لغات وكانت أول بطلمية تتكلم المصرية. تحالفاتها مع قيصر وأنطونيو لم تنقذ مصر من روما.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     قسم الجغرافيا
+════════════════════════════════════════════════ -->
+<div class="geo-strip" id="geography">
+  <div style="max-width:1100px;margin:0 auto;text-align:center;">
+    <h2 class="section-title reveal" style="color:var(--nile-light);">جغرافيا مصر وأرضها</h2>
+    <div class="divider nile-divider reveal"></div>
+    <p class="section-subtitle reveal" style="color:#AED6F1;">الأرض التي صنعت الحضارة — من دلتا النيل الخصبة إلى الجبال الحمراء وسيناء والصحراء الكبرى</p>
+
+    <div class="geo-grid">
+      <div class="geo-card reveal">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBCMkE0NCIvPgogIDxwYXRoIGQ9Ik01MCw1IEw1MCw0MCBRNDAsNTUgMTUsNzUgTDg1LDc1IFE2MCw1NSA1MCw0MFoiIGZpbGw9IiM0QThDM0YiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik01MCw0MCBRMzgsNTAgMjAsNjUiIHN0cm9rZT0iIzVEQURFMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNNTAsNDAgUTUwLDU4IDUwLDcwIiBzdHJva2U9IiM1REFERTIiIHN0cm9rZS13aWR0aD0iMi41IiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTTUwLDQwIFE2Miw1MCA4MCw2NSIgc3Ryb2tlPSIjNURBREUyIiBzdHJva2Utd2lkdGg9IjIuNSIgZmlsbD0ibm9uZSIvPgogIDxyZWN0IHg9IjAiIHk9Ijc1IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjI1IiBmaWxsPSIjMUI0RjcyIiBvcGFjaXR5PSIwLjkiLz4KICA8cGF0aCBkPSJNMCw3OCBRMjUsNzMgNTAsNzggUTc1LDgzIDEwMCw3OCIgc3Ryb2tlPSIjNURBREUyIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNSIgcj0iNSIgZmlsbD0iIzhCNjkxNCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNSIgcj0iMyIgZmlsbD0iI0M5QTg0QyIvPgo8L3N2Zz4=" alt="دلتا النيل" loading="lazy"></span>
+        <div class="geo-title">دلتا النيل</div>
+        <p class="geo-text">أخصب أراضي العالم — تتفرع فيها مياه النيل إلى فرعَي دمياط ورشيد قبل صبّها في البحر المتوسط. تمتد على مساحة 24,000 كم² وتضم معظم سكان مصر.</p>
+      </div>
+      <div class="geo-card reveal reveal-delay-1">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZGVzZXJ0MSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQzMwNTAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2QjRBMUEiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNkZXNlcnQxKSIvPgogIDxwYXRoIGQ9Ik0wLDYwIFExNSw1MCAzMCw2MCBRNDUsNzAgNjAsNTUgUTc1LDQwIDEwMCw1OCBMMTAwLDEwMCBMMCwxMDBaIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHBhdGggZD0iTTAsNzAgUTIwLDYyIDQwLDcwIFE2MCw3OCA4MCw2NSBROTAsNjAgMTAwLDY4IEwxMDAsMTAwIEwwLDEwMFoiIGZpbGw9IiNENEE4MzAiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0xMCw4MCBRMzAsNzUgNTAsODIgUTcwLDg5IDkwLDc4IEwxMDAsMTAwIEwwLDEwMFoiIGZpbGw9IiM4QjY5MTQiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjgwIiBjeT0iMjAiIHI9IjEyIiBmaWxsPSIjRjBEMDgwIiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjIwIiByPSI4IiBmaWxsPSIjRkZENzAwIi8+CiAgPGNpcmNsZSBjeD0iMTUiIGN5PSIxMiIgcj0iMS41IiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjciLz4KICA8Y2lyY2xlIGN4PSIzNSIgY3k9IjgiIHI9IjEiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNSIvPgogIDxjaXJjbGUgY3g9IjU1IiBjeT0iMTUiIHI9IjEuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==" alt="الصحراء الغربية" loading="lazy"></span>
+        <div class="geo-title">الصحراء الغربية (الليبية)</div>
+        <p class="geo-text">تُشكّل 68% من مساحة مصر — من أكبر الصحاري الحارة في العالم. تضم واحات الفيوم وسيوة وبحريّة ودخلة والداخلة. طريق القوافل القديمة.</p>
+      </div>
+      <div class="geo-card reveal reveal-delay-2">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZWRza3kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUEwQjBCIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNkIyMDEwIi8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjZWRza3kpIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIwLDEwMCAwLDYwIDIwLDMwIDQwLDU1IDYwLDIwIDgwLDQ1IDEwMCwyNSAxMDAsMTAwIiBmaWxsPSIjOEI1QTJCIiBvcGFjaXR5PSIwLjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjAsMTAwIDAsNzAgMTUsNTAgMzAsNjUgNTAsNDAgNzAsNTggODUsNDIgMTAwLDU1IDEwMCwxMDAiIGZpbGw9IiNBMDc4NEEiIG9wYWNpdHk9IjAuOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMCwxMDAgMTAsODAgMzAsNzUgNTAsODIgNzAsNzIgOTAsODAgMTAwLDc2IDEwMCwxMDAiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iMTUiIHI9IjkiIGZpbGw9IiNGMEQwODAiIG9wYWNpdHk9IjAuOSIvPgo8L3N2Zz4=" alt="الصحراء الشرقية" loading="lazy"></span>
+        <div class="geo-title">الصحراء الشرقية (العربية)</div>
+        <p class="geo-text">تمتد بين النيل والبحر الأحمر — غنية بالمعادن والذهب الذي يستخرجه الفراعنة. جبالها تضم المحاجر التي بُنيت منها المعابد الكبرى.</p>
+      </div>
+      <div class="geo-card reveal">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFCNEY3MiIvPgogIDxwYXRoIGQ9Ik0yMCw5MCBMMjAsMzAgTDUwLDggTDgwLDMwIEw4MCw5MFoiIGZpbGw9IiM4QjVBMkIiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik0yMCw5MCBMMjAsMzAgTDUwLDgiIGZpbGw9IiNBMDc4NEEiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0yMCw5MCBMMzUsNzUgTDUwLDc4IEw2NSw3MiBMODAsOTBaIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjUiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjgiIHI9IjMiIGZpbGw9IiNGRkQ3MDAiLz4KICA8cmVjdCB4PSIwIiB5PSI3OCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyMiIgZmlsbD0iIzFCNEY3MiIgb3BhY2l0eT0iMC45Ii8+CiAgPHJlY3QgeD0iMCIgeT0iNjgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIzMiIgZmlsbD0iIzFCNkNBOCIgb3BhY2l0eT0iMC44Ii8+CiAgPHJlY3QgeD0iODAiIHk9IjY4IiB3aWR0aD0iMjAiIGhlaWdodD0iMzIiIGZpbGw9IiMxQjZDQTgiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9IjI1IiBjeT0iMjAiIHI9IjEuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+CiAgPGNpcmNsZSBjeD0iNzUiIGN5PSIxOCIgcj0iMSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==" alt="سيناء" loading="lazy"></span>
+        <div class="geo-title">شبه جزيرة سيناء</div>
+        <p class="geo-text">جسر الحضارات بين أفريقيا وآسيا — طريق الفراعنة إلى كنعان وبلاد الشام. تضم مناجم الفيروز والنحاس وجبل سيناء المقدس الذي يبلغ 2629م.</p>
+      </div>
+      <div class="geo-card reveal reveal-delay-1">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC4zIi8+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiMzRDJBMDAiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI2MCIgcng9IjM1IiByeT0iMjgiIGZpbGw9IiM0QThDM0YiIG9wYWNpdHk9IjAuOSIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjYyIiByeD0iMjgiIHJ5PSIyMCIgZmlsbD0iIzVEOUU1MiIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjY4IiByeD0iMTgiIHJ5PSIxMiIgZmlsbD0iIzFCNkNBOCIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNjgiIHJ4PSIxNCIgcnk9IjkiIGZpbGw9IiMyRTg2QzEiLz4KICA8ZyBmaWxsPSIjNUQ5RTUyIj4KICAgIDxjaXJjbGUgY3g9IjI4IiBjeT0iNTUiIHI9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjM1IiBjeT0iNDgiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjY1IiBjeT0iNTUiIHI9IjUiLz4KICAgIDxjaXJjbGUgY3g9IjcyIiBjeT0iNDgiIHI9IjQiLz4KICAgIDxjaXJjbGUgY3g9IjUwIiBjeT0iNDIiIHI9IjUiLz4KICA8L2c+CiAgPGc+CiAgICA8bGluZSB4MT0iMjgiIHkxPSI1NSIgeDI9IjI4IiB5Mj0iNzAiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iMzUiIHkxPSI0OCIgeDI9IjM1IiB5Mj0iNjIiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iNjUiIHkxPSI1NSIgeDI9IjY1IiB5Mj0iNzAiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iNzIiIHkxPSI0OCIgeDI9IjcyIiB5Mj0iNjIiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgICA8bGluZSB4MT0iNTAiIHkxPSI0MiIgeDI9IjUwIiB5Mj0iNTUiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMjAiIHI9IjEwIiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjg1Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIyMCIgcj0iNyIgZmlsbD0iI0ZGRDcwMCIvPgo8L3N2Zz4=" alt="واحة سيوة" loading="lazy"></span>
+        <div class="geo-title">واحة سيوة</div>
+        <p class="geo-text">جزيرة خضراء في قلب الصحراء — زارها الإسكندر الأكبر ليستشير وحيها الشهير. تضم معبد آمون القديم وتشتهر بالزيتون والتمر والينابيع المعدنية.</p>
+      </div>
+      <div class="geo-card reveal reveal-delay-2">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibnViaWFfc2t5IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFDMzA1MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNEMkEwMCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ1cmwoI251YmlhX3NreSkiLz4KICA8cG9seWdvbiBwb2ludHM9IjAsMTAwIDAsNTUgMjUsNDAgNTAsNTUgNzUsMzUgMTAwLDUwIDEwMCwxMDAiIGZpbGw9IiM4QjVBMkIiIG9wYWNpdHk9IjAuOSIvPgogIDxwYXRoIGQ9Ik00MiwxMCBRMzgsMzAgMzUsNTUgUTM4LDY1IDQ1LDgwIFE1MCw5MCA1NSw4MCBRNjIsNjUgNjUsNTUgUTYyLDMwIDU4LDEwIFE1NCw1IDUwLDUgUTQ2LDUgNDIsMTBaIiBmaWxsPSIjMUI0RjcyIiBvcGFjaXR5PSIwLjk1Ii8+CiAgPHBhdGggZD0iTTQ0LDEyIFE0MCwzMiAzNyw1NyBRNDAsNjcgNDcsODIiIHN0cm9rZT0iIzVEQURFMiIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjUiLz4KICA8cGF0aCBkPSJNMCw3NSBRMjUsNzAgNTAsNzUgUTc1LDgwIDEwMCw3NSIgc3Ryb2tlPSIjNURBREUyIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjgwIiBjeT0iMTgiIHI9IjEwIiBmaWxsPSIjRjBEMDgwIiBvcGFjaXR5PSIwLjkiLz4KPC9zdmc+" alt="النوبة" loading="lazy"></span>
+        <div class="geo-title">النوبة والشلال الأول</div>
+        <p class="geo-text">البوابة الجنوبية لمصر — عند أسوان حيث يضيق النيل بين الجلمود. كانت ممراً للتجارة مع أفريقيا وأرض الذهب والعاج والعبيد في التاريخ القديم.</p>
+      </div>
+      <div class="geo-card reveal">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0id2Rza3kiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUMzMDUwIi8+PHN0b3Agb2Zmc2V0PSI2MCUiIHN0b3AtY29sb3I9IiM1RDRFMzAiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCN3ZHNreSkiLz4KICA8cmVjdCB4PSIwIiB5PSI2NSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIzNSIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC42Ii8+CiAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iNjUiIHJ4PSI4IiByeT0iMTgiIGZpbGw9IiNGNUY1REMiIG9wYWNpdHk9IjAuOTUiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI2MCIgcng9IjYiIHJ5PSIyMiIgZmlsbD0iI0ZBRkFGQSIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9Ijc4IiBjeT0iNjUiIHJ4PSI5IiByeT0iMTYiIGZpbGw9IiNGMEYwRTgiIG9wYWNpdHk9IjAuOTUiLz4KICA8ZWxsaXBzZSBjeD0iMzUiIGN5PSI2OCIgcng9IjUiIHJ5PSIxMiIgZmlsbD0iI0Y1RjVEQyIgb3BhY2l0eT0iMC44NSIvPgogIDxlbGxpcHNlIGN4PSI2MiIgY3k9IjY3IiByeD0iNyIgcnk9IjE0IiBmaWxsPSIjRkFGQUZBIiBvcGFjaXR5PSIwLjgiLz4KICA8Y2lyY2xlIGN4PSI3NSIgY3k9IjE4IiByPSIxMCIgZmlsbD0iI0YwRDA4MCIgb3BhY2l0eT0iMC45Ii8+CiAgPGNpcmNsZSBjeD0iNzUiIGN5PSIxOCIgcj0iNyIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9IjIwIiBjeT0iMTAiIHI9IjEuNSIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iNDUiIGN5PSI4IiByPSIxIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+" alt="الوادي الأبيض" loading="lazy"></span>
+        <div class="geo-title">الوادي الأبيض والأسود</div>
+        <p class="geo-text">ظاهرة جيولوجية مذهلة في الصحراء الغربية — الوادي الأبيض بصخوره الكلسية البيضاء كالحليب، والوادي الأسود بصخوره البركانية السوداء. منظر خارج من روايات.</p>
+      </div>
+      <div class="geo-card reveal reveal-delay-1">
+        <span class="geo-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzNEMkEwMCIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjU1IiByeD0iNDAiIHJ5PSIzMiIgZmlsbD0iIzRBOEMzRiIgb3BhY2l0eT0iMC45Ii8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNTUiIHJ4PSIzMiIgcnk9IjI1IiBmaWxsPSIjNUQ5RTUyIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNTgiIHJ4PSIyMCIgcnk9IjE0IiBmaWxsPSIjMUI0RjcyIiBvcGFjaXR5PSIwLjkiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1OCIgcng9IjE1IiByeT0iMTAiIGZpbGw9IiMyRTg2QzEiLz4KICA8ZyBmaWxsPSIjOEI2OTE0Ij4KICAgIDxyZWN0IHg9IjI1IiB5PSI0MiIgd2lkdGg9IjMiIGhlaWdodD0iMTgiIHJ4PSIxIi8+CiAgICA8ZWxsaXBzZSBjeD0iMjYiIGN5PSIzOCIgcng9IjUiIHJ5PSI4Ii8+CiAgICA8cmVjdCB4PSI0MCIgeT0iMzgiIHdpZHRoPSIzIiBoZWlnaHQ9IjIyIiByeD0iMSIvPgogICAgPGVsbGlwc2UgY3g9IjQxIiBjeT0iMzQiIHJ4PSI1IiByeT0iOCIvPgogICAgPHJlY3QgeD0iNTciIHk9IjM4IiB3aWR0aD0iMyIgaGVpZ2h0PSIyMiIgcng9IjEiLz4KICAgIDxlbGxpcHNlIGN4PSI1OCIgY3k9IjM0IiByeD0iNSIgcnk9IjgiLz4KICAgIDxyZWN0IHg9IjcyIiB5PSI0MiIgd2lkdGg9IjMiIGhlaWdodD0iMTgiIHJ4PSIxIi8+CiAgICA8ZWxsaXBzZSBjeD0iNzMiIGN5PSIzOCIgcng9IjUiIHJ5PSI4Ii8+CiAgPC9nPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iMTgiIHI9IjEwIiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjg1Ii8+Cjwvc3ZnPg==" alt="واحة الفيوم" loading="lazy"></span>
+        <div class="geo-title">واحة الفيوم</div>
+        <p class="geo-text">أكبر واحات مصر — قلبها بحيرة قارون الأثرية. عُرفت في العصور الفرعونية بـ"شيدت" وكانت مركز عبادة سوبك إله التمساح. تُنتج أجود البرتقال المصري.</p>
+      </div>
+    </div>
+
+    <!-- إحصائيات مصر الجغرافية -->
+    <div class="nile-facts" style="margin-top:3rem;">
+      <div class="nile-fact"><span class="nf-num">1,002,450</span><span class="nf-lbl">كم² مساحة مصر</span></div>
+      <div class="nile-fact"><span class="nf-num">2637م</span><span class="nf-lbl">أعلى قمة (قمة كاترين)</span></div>
+      <div class="nile-fact"><span class="nf-num">2900 كم</span><span class="nf-lbl">الساحل البحري الإجمالي</span></div>
+      <div class="nile-fact"><span class="nf-num">7</span><span class="nf-lbl">واحات كبرى في الصحراء</span></div>
+      <div class="nile-fact"><span class="nf-num">105+م</span><span class="nf-lbl">م) منخفض القطارة (أعمق نقطة</span></div>
+    </div>
+  </div>
+</div>
 <div class="achievements-strip" id="achievements">
   <div style="max-width:1100px;margin:0 auto;text-align:center;">
     <h2 class="section-title reveal">إنجازات الحضارة المصرية</h2>
@@ -937,42 +1633,42 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
 
     <div class="achieve-grid">
       <div class="achieve-item reveal">
-        <span class="achieve-icon">📐</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ic2t5IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzFDMzA1MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzZCNEExQSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9InNhbmQiIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjQzlBODRDIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjOEI2OTE0Ii8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9InVybCgjc2t5KSIvPgogIDxyZWN0IHg9IjAiIHk9IjcwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjM0QyQTAwIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwxNSA3NSw3MCAyNSw3MCIgZmlsbD0idXJsKCNzYW5kKSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTUgNjIsNzAgNTAsNzAiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTgsNDAgMzIsNzAgNSw3MCIgZmlsbD0iI0EwNzgyMCIgb3BhY2l0eT0iMC44Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4Miw0NSA5NSw3MCA3MCw3MCIgZmlsbD0iI0EwNzgyMCIgb3BhY2l0eT0iMC43Ii8+CiAgPGNpcmNsZSBjeD0iODAiIGN5PSIyMCIgcj0iOCIgZmlsbD0iI0YwRDA4MCIgb3BhY2l0eT0iMC45Ii8+Cjwvc3ZnPg==" alt="الهندسة" loading="lazy"></span>
         <div class="achieve-title">الهندسة والرياضيات</div>
         <p class="achieve-text">ابتكروا أساسيات الهندسة الحسابية في بناء الأهرامات — حساب المساحات والأحجام والزوايا بدقة مذهلة. كان بردية موسكو وأهمس أقدم وثائق رياضية في التاريخ.</p>
       </div>
       <div class="achieve-item reveal reveal-delay-1">
-        <span class="achieve-icon">⚕️</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjIwIiB5PSIxNSIgd2lkdGg9IjYwIiBoZWlnaHQ9Ijc1IiByeD0iNCIgZmlsbD0iI0Y1RTZDOCIgb3BhY2l0eT0iMC45NSIvPgogIDxyZWN0IHg9IjIwIiB5PSIxNSIgd2lkdGg9IjYwIiBoZWlnaHQ9Ijc1IiByeD0iNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cmVjdCB4PSIxNSIgeT0iMjAiIHdpZHRoPSI4IiBoZWlnaHQ9IjY1IiByeD0iMyIgZmlsbD0iI0Q0Qjg5NiIgb3BhY2l0eT0iMC44Ii8+CiAgPHJlY3QgeD0iNzciIHk9IjIwIiB3aWR0aD0iOCIgaGVpZ2h0PSI2NSIgcng9IjMiIGZpbGw9IiNENEI4OTYiIG9wYWNpdHk9IjAuOCIvPgogIDxsaW5lIHgxPSIzMCIgeTE9IjMwIiB4Mj0iNzAiIHkyPSIzMCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPGxpbmUgeDE9IjMwIiB5MT0iMzgiIHgyPSI3MCIgeTI9IjM4IiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjYiLz4KICA8bGluZSB4MT0iMzAiIHkxPSI0NiIgeDI9IjY1IiB5Mj0iNDYiIHN0cm9rZT0iIzhCNjkxNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSIzMCIgeTE9IjU0IiB4Mj0iNzAiIHkyPSI1NCIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC42Ii8+CiAgPGxpbmUgeDE9IjMwIiB5MT0iNjIiIHgyPSI2MCIgeTI9IjYyIiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjYiLz4KICA8dGV4dCB4PSI1MCIgeT0iODAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCI+8JOCgDwvdGV4dD4KPC9zdmc+" alt="الطب" loading="lazy"></span>
         <div class="achieve-title">الطب والجراحة</div>
         <p class="achieve-text">أول أطباء في التاريخ — اكتشفوا الأجهزة والأعضاء وعالجوا الكسور وأجروا عمليات جراحية. بردية إيبرس تعدّ أقدم دليل طبي يصف أكثر من 700 وصفة ومرض.</p>
       </div>
       <div class="achieve-item reveal reveal-delay-2">
-        <span class="achieve-icon">🌟</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzBCMEIyRCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQyIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjQiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjEwIiBmaWxsPSIjRjVDNTE4IiBvcGFjaXR5PSIwLjkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI3IiBmaWxsPSIjRkZENzAwIi8+CiAgPGNpcmNsZSBjeD0iMjIiIGN5PSIzMCIgcj0iMyIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9Ijc4IiBjeT0iMjUiIHI9IjIuNSIgZmlsbD0iI0YwRDA4MCIvPgogIDxjaXJjbGUgY3g9IjE1IiBjeT0iNjAiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOCIvPgogIDxjaXJjbGUgY3g9Ijg1IiBjeT0iNjUiIHI9IjIuNSIgZmlsbD0iI0YwRDA4MCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iOCIgcj0iMyIgZmlsbD0iI0ZGRDcwMCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iOTIiIHI9IjIuNSIgZmlsbD0iI0YwRDA4MCIvPgogIDxjaXJjbGUgY3g9IjM1IiBjeT0iNzAiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPgogIDxjaXJjbGUgY3g9IjcwIiBjeT0iNzIiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNiIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjgiIHgyPSI1MCIgeTI9IjQwIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIi8+CiAgPGxpbmUgeDE9IjE1IiB5MT0iNTAiIHgyPSI0MCIgeTI9IjUwIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIi8+Cjwvc3ZnPg==" alt="الفلك" loading="lazy"></span>
         <div class="achieve-title">علم الفلك والتقويم</div>
         <p class="achieve-text">ابتكروا التقويم الشمسي المكوّن من 365 يوماً و12 شهراً — أساس تقويمنا الحديث. رصدوا النجوم ووضعوا أول خارطة فلكية تصف 36 كوكبة.</p>
       </div>
       <div class="achieve-item reveal">
-        <span class="achieve-icon">✍️</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjE4IiB5PSIxMCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjgyIiByeD0iMyIgZmlsbD0iIzNEMzUzMCIvPgogIDxyZWN0IHg9IjE4IiB5PSIxMCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjgyIiByeD0iMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjEuNSIgb3BhY2l0eT0iMC41Ii8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iMTAiIHgyPSI1MCIgeTI9IjkyIiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC40Ii8+CiAgPHRleHQgeD0iMzQiIHk9IjI2IiBmb250LXNpemU9IjciIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCI+8JOCgPCThqPimKU8L3RleHQ+CiAgPHRleHQgeD0iMzQiIHk9IjM2IiBmb250LXNpemU9IjciIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuOCI+8JOLtPCThpnwk4eLPC90ZXh0PgogIDx0ZXh0IHg9IjM0IiB5PSI0NiIgZm9udC1zaXplPSI3IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciPvCTgbnwk4OA8JOFkzwvdGV4dD4KICA8dGV4dCB4PSI1NiIgeT0iMjYiIGZvbnQtc2l6ZT0iNi41IiBmaWxsPSIjRThENUEwIiBvcGFjaXR5PSIwLjciPs6RzpLOk86UzpU8L3RleHQ+CiAgPHRleHQgeD0iNTYiIHk9IjM2IiBmb250LXNpemU9IjYuNSIgZmlsbD0iI0U4RDVBMCIgb3BhY2l0eT0iMC43Ij7Ols6XzpjOmc6aPC90ZXh0PgogIDx0ZXh0IHg9IjU2IiB5PSI0NiIgZm9udC1zaXplPSI2LjUiIGZpbGw9IiNFOEQ1QTAiIG9wYWNpdHk9IjAuNjUiPs6bzpzOnc6ezp88L3RleHQ+CiAgPGxpbmUgeDE9IjIyIiB5MT0iNTUiIHgyPSI3OCIgeTI9IjU1IiBzdHJva2U9IiM4QjY5MTQiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjUiLz4KICA8dGV4dCB4PSIzNCIgeT0iNjYiIGZvbnQtc2l6ZT0iNi41IiBmaWxsPSIjRDRDOEEwIiBvcGFjaXR5PSIwLjYiIGZvbnQtc3R5bGU9Iml0YWxpYyI+bW54IHfhuI/qnKMgc25iPC90ZXh0PgogIDx0ZXh0IHg9IjM0IiB5PSI3NiIgZm9udC1zaXplPSI2LjUiIGZpbGw9IiNENEM4QTAiIG9wYWNpdHk9IjAuNiI+aciddyBuIFB0bHdteXM8L3RleHQ+Cjwvc3ZnPg==" alt="الكتابة" loading="lazy"></span>
         <div class="achieve-title">الكتابة والبردي</div>
         <p class="achieve-text">اخترعوا الكتابة الهيروغليفية وورق البردي — أول وسيط للكتابة في التاريخ. مكّن البردي من حفظ المعرفة ونقلها عبر الأجيال ونقل العلم لأمم أخرى.</p>
       </div>
       <div class="achieve-item reveal reveal-delay-1">
-        <span class="achieve-icon">🏗️</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0idGVtcGxlc2t5IiB4MT0iMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBCMUUyRCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFBM0E1MCIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJ1cmwoI3RlbXBsZXNreSkiLz4KICA8cmVjdCB4PSIxMCIgeT0iNTUiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0I4OEIyMCIgb3BhY2l0eT0iMC45Ii8+CiAgPHJlY3QgeD0iMTUiIHk9IjQwIiB3aWR0aD0iNzAiIGhlaWdodD0iMTgiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuODUiLz4KICA8cmVjdCB4PSIyMCIgeT0iMjgiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxNCIgZmlsbD0iI0Q0QTgzMCIgb3BhY2l0eT0iMC44Ii8+CiAgPGcgZmlsbD0iIzhCNjkxNCIgb3BhY2l0eT0iMC45Ij4KICAgIDxyZWN0IHg9IjE4IiB5PSI0MCIgd2lkdGg9IjgiIGhlaWdodD0iNTUiLz48cmVjdCB4PSIzMiIgeT0iNDAiIHdpZHRoPSI4IiBoZWlnaHQ9IjU1Ii8+CiAgICA8cmVjdCB4PSI0NiIgeT0iNDAiIHdpZHRoPSI4IiBoZWlnaHQ9IjU1Ii8+PHJlY3QgeD0iNjAiIHk9IjQwIiB3aWR0aD0iOCIgaGVpZ2h0PSI1NSIvPgogICAgPHJlY3QgeD0iNzQiIHk9IjQwIiB3aWR0aD0iOCIgaGVpZ2h0PSI1NSIvPgogIDwvZz4KICA8cmVjdCB4PSI0MCIgeT0iNjgiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyNyIgZmlsbD0iIzFBMEEwMCIvPgogIDxjaXJjbGUgY3g9Ijc1IiBjeT0iMjAiIHI9IjEwIiBmaWxsPSIjRjBEMDgwIiBvcGFjaXR5PSIwLjg1Ii8+CiAgPHRleHQgeD0iNDAiIHk9IjUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNGMEQwODAiIG9wYWNpdHk9IjAuNiI+8JOCgDwvdGV4dD4KPC9zdmc+" alt="العمارة" loading="lazy"></span>
         <div class="achieve-title">الهندسة المعمارية</div>
         <p class="achieve-text">ابتكروا العمود والمسلّة والصرح والمعبد الجنائزي — أشكال معمارية ألهمت حضارات لاحقة. مبادئهم الهندسية في الأهرامات لا تزال تثير إعجاب العلماء.</p>
       </div>
       <div class="achieve-item reveal reveal-delay-2">
-        <span class="achieve-icon">⚖️</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjE1IiB4Mj0iNTAiIHkyPSI4MCIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjMiLz4KICA8bGluZSB4MT0iMjAiIHkxPSIzMiIgeDI9IjgwIiB5Mj0iMzIiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjMyIiByPSI0IiBmaWxsPSIjRkZENzAwIi8+CiAgPGxpbmUgeDE9IjIwIiB5MT0iMzIiIHgyPSIyMCIgeTI9IjQ4IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjgwIiB5MT0iMzIiIHgyPSI4MCIgeTI9IjQ4IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGVsbGlwc2UgY3g9IjIwIiBjeT0iNDgiIHJ4PSIxMiIgcnk9IjYiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNyIvPgogIDxlbGxpcHNlIGN4PSI4MCIgY3k9IjQ4IiByeD0iMTIiIHJ5PSI2IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciLz4KICA8dGV4dCB4PSIxNyIgeT0iNTIiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iIzFBMEEwMCI+8JOCgDwvdGV4dD4KICA8cGF0aCBkPSJNNDQsMjUgQzQyLDE4IDQ4LDE0IDUwLDEyIEM1MiwxNCA1OCwxOCA1NiwyNSBaIiBmaWxsPSIjRjVGNURDIi8+CiAgPHJlY3QgeD0iNDYiIHk9Ijc4IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjYiLz4KICA8bGluZSB4MT0iMzAiIHkxPSI4NSIgeDI9IjcwIiB5Mj0iODUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPC9zdmc+" alt="العدالة" loading="lazy"></span>
         <div class="achieve-title">القانون والإدارة</div>
         <p class="achieve-text">أرسوا مفهوم الدولة المركزية والقانون والعدالة — نظام الوزارات وتسجيل الأراضي والضرائب والمحاكم. مفهوم "ماعت" الكوني يعني العدل والحق والتوازن.</p>
       </div>
       <div class="achieve-item reveal">
-        <span class="achieve-icon">🚢</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibmlsZSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMxQjRGNzIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwQjJGNDUiLz48L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMUEyRSIvPgogIDxyZWN0IHg9IjAiIHk9IjU4IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjQyIiBmaWxsPSJ1cmwoI25pbGUpIi8+CiAgPHBhdGggZD0iTTAsNjUgUTI1LDYwIDUwLDY1IFE3NSw3MCAxMDAsNjUgTDEwMCwxMDAgTDAsMTAwWiIgZmlsbD0iIzFCNEY3MiIgb3BhY2l0eT0iMC42Ii8+CiAgPHBhdGggZD0iTTE1LDYwIFE1MCw0MCA4NSw2MCBMODAsNjggUTUwLDU1IDIwLDY4WiIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC45Ii8+CiAgPHJlY3QgeD0iNDgiIHk9IjIwIiB3aWR0aD0iNCIgaGVpZ2h0PSI0MiIgZmlsbD0iIzhCNjkxNCIvPgogIDxwYXRoIGQ9Ik01MCwyMiBMNzUsMzggTDUwLDQyWiIgZmlsbD0iI0Q0QTgzMCIgb3BhY2l0eT0iMC45Ii8+CiAgPHBhdGggZD0iTTUwLDIyIEwyNSwzOCBMNTAsNDJaIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciLz4KICA8dGV4dCB4PSI1MCIgeT0iMTUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiNGMEQwODAiIG9wYWNpdHk9IjAuOCI+8JOHszwvdGV4dD4KPC9zdmc+" alt="الملاحة" loading="lazy"></span>
         <div class="achieve-title">الملاحة والتجارة</div>
         <p class="achieve-text">أبحروا في البحر الأحمر والمتوسط وفتحوا طرق التجارة مع بلاد بونت وكنعان وجزر بحر إيجه. بنوا سفناً كبيرة لنقل الأحجار الضخمة عبر النيل.</p>
       </div>
       <div class="achieve-item reveal reveal-delay-1">
-        <span class="achieve-icon">🎨</span>
+        <span class="achieve-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzFBMEEwMCIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSI4NCIgaGVpZ2h0PSI4NCIgcng9IjIiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuMTUiLz4KICA8cmVjdCB4PSI4IiB5PSI4IiB3aWR0aD0iODQiIGhlaWdodD0iODQiIHJ4PSIyIiBmaWxsPSJub25lIiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjQiLz4KICA8ZWxsaXBzZSBjeD0iMzUiIGN5PSI0MCIgcng9IjEwIiByeT0iMjUiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNiIvPgogIDxjaXJjbGUgY3g9IjM1IiBjeT0iMjIiIHI9IjgiIGZpbGw9IiNENEE4MzAiIG9wYWNpdHk9IjAuOCIvPgogIDxyZWN0IHg9IjMwIiB5PSIyMiIgd2lkdGg9IjEwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjUiLz4KICA8ZWxsaXBzZSBjeD0iNjUiIGN5PSI0MiIgcng9IjkiIHJ5PSIyMyIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC42Ii8+CiAgPGNpcmNsZSBjeD0iNjUiIGN5PSIyNCIgcj0iNyIgZmlsbD0iI0Q0QTgzMCIgb3BhY2l0eT0iMC44Ii8+CiAgPHJlY3QgeD0iNjAiIHk9IjI0IiB3aWR0aD0iMTAiIGhlaWdodD0iMjgiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNSIvPgogIDx0ZXh0IHg9IjUwIiB5PSI3NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxOCIgZmlsbD0iI0M5QTg0QyIgb3BhY2l0eT0iMC43Ij7wk4KAPC90ZXh0PgogIDxsaW5lIHgxPSIxNSIgeTE9Ijg1IiB4Mj0iODUiIHkyPSI4NSIgc3Ryb2tlPSIjQzlBODRDIiBzdHJva2Utd2lkdGg9IjIiIG9wYWNpdHk9IjAuNCIvPgo8L3N2Zz4=" alt="الفنون" loading="lazy"></span>
         <div class="achieve-title">الفنون والأدب</div>
         <p class="achieve-text">خلّفوا أثرى تراث فني في التاريخ القديم — النحت والرسم والموسيقى والشعر الديني. قصيدة "نشيد آتون" لأخناتون تُعدّ أول قصيدة غنائية في التاريخ.</p>
       </div>
@@ -1082,17 +1778,42 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
 <section id="gallery">
   <h2 class="section-title reveal">رموز الحضارة المصرية</h2>
   <div class="divider reveal"></div>
-  <p class="section-subtitle reveal">رموز خالدة حملت معاني عميقة في الديانة والحضارة المصرية القديمة.</p>
+  <p class="section-subtitle reveal">رموز خالدة حملت معاني عميقة في الديانة والحضارة المصرية القديمة — كل رمز كتاب بحد ذاته.</p>
   <div class="gallery">
-    <div class="gallery-item reveal"><span>𓂀</span><span>عين حورس</span></div>
-    <div class="gallery-item reveal reveal-delay-1"><span>𓆣</span><span>الجعران المقدس</span></div>
+    <div class="gallery-item reveal"><span>𓂀</span><span>عين حورس — الحماية</span></div>
+    <div class="gallery-item reveal reveal-delay-1"><span>𓆣</span><span>الجعران — البعث</span></div>
     <div class="gallery-item reveal reveal-delay-2"><span>☥</span><span>الأنخ — الحياة</span></div>
-    <div class="gallery-item reveal"><span>𓋴</span><span>الأفعى الكوبرا</span></div>
+    <div class="gallery-item reveal"><span>𓋴</span><span>الكوبرا — الملكية</span></div>
     <div class="gallery-item reveal reveal-delay-1"><span>𓁹</span><span>رع — إله الشمس</span></div>
     <div class="gallery-item reveal reveal-delay-2"><span>𓆙</span><span>الصقر الإلهي</span></div>
     <div class="gallery-item reveal"><span>𓇳</span><span>قرص الشمس</span></div>
-    <div class="gallery-item reveal reveal-delay-1"><span>𓋀</span><span>تاج مصر الأبيض</span></div>
-    <div class="gallery-item reveal reveal-delay-2"><span>𓏏</span><span>رغيف الخبز</span></div>
+    <div class="gallery-item reveal reveal-delay-1"><span>𓋀</span><span>التاج الأبيض</span></div>
+    <div class="gallery-item reveal reveal-delay-2"><span>𓏏</span><span>رغيف — الحياة</span></div>
+    <div class="gallery-item reveal"><span>𓅱</span><span>الكتكوت — الروح</span></div>
+    <div class="gallery-item reveal reveal-delay-1"><span>𓆑</span><span>الأفعى الينفاخ</span></div>
+    <div class="gallery-item reveal reveal-delay-2"><span>𓇋</span><span>ورقة البردي</span></div>
+    <div class="gallery-item reveal"><span>𓈖</span><span>تموّج الماء</span></div>
+    <div class="gallery-item reveal reveal-delay-1"><span>𓅓</span><span>البومة — الحكمة</span></div>
+    <div class="gallery-item reveal reveal-delay-2"><span>𓃀</span><span>القدم — السفر</span></div>
+    <div class="gallery-item reveal"><span>𓂋</span><span>الفم — الكلام</span></div>
+    <div class="gallery-item reveal reveal-delay-1"><span>𓂧</span><span>اليد — العطاء</span></div>
+    <div class="gallery-item reveal reveal-delay-2"><span>𓄿</span><span>النسر — المبدأ</span></div>
+  </div>
+
+  <!-- معلومات إضافية عن الرموز -->
+  <div style="margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;" class="reveal">
+    <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:6px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--gold);margin-bottom:0.8rem;">☥ الأنخ — مفتاح الحياة</h4>
+      <p style="color:var(--sand);opacity:0.75;font-size:0.9rem;line-height:1.8;">رمز الحياة الأبدية — مزيج من علامة الصليب الذكرية والدائرة الأنثوية. يُصوَّر الآلهة يحملونه للتعبير عن منح الحياة للفرعون. لا يزال يُستخدم في الكنيسة القبطية.</p>
+    </div>
+    <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:6px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--gold);margin-bottom:0.8rem;">𓂀 عين حورس — الودجات</h4>
+      <p style="color:var(--sand);opacity:0.75;font-size:0.9rem;line-height:1.8;">من أشهر رموز مصر القديمة — تُجسّد العين المحطّمة التي أعادها تحوت لحورس بعد معركته مع ست. رمز الحماية والصحة وقوة الملك. تُستخدم تميمةً للحظ حتى اليوم.</p>
+    </div>
+    <div style="background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:6px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--gold);margin-bottom:0.8rem;">𓆣 الجعران — خبري</h4>
+      <p style="color:var(--sand);opacity:0.75;font-size:0.9rem;line-height:1.8;">رمز التجدد والبعث والشمس الصاعدة — الجعل يدحرج كرته كما تدحرج الشمس عبر السماء. يُجسّد الإله خبري (الشمس المشرقة). ارتُدي على شكل تميمات وخواتم لحماية الأرواح.</p>
+    </div>
   </div>
 </section>
 
@@ -1105,6 +1826,15 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
   <div class="divider" style="margin-top:2rem;"></div>
   <blockquote style="font-size:clamp(1rem,2.2vw,1.5rem); margin-top:2rem;">"مصر لم تمت ولن تموت — لأن الأرض التي شهدت هذه العظمة تحمل في صميمها جينات الخلود"</blockquote>
   <p class="quote-attr">— من وحي الحضارة</p>
+  <div class="divider" style="margin-top:2rem;"></div>
+  <blockquote style="font-size:clamp(1rem,2.2vw,1.5rem); margin-top:2rem;">"من أراد أن يرى عظمة الله في الخلق فلينظر إلى مصر — فالله أودع فيها أسرار الكون"</blockquote>
+  <p class="quote-attr">— ابن خلدون</p>
+  <div class="divider" style="margin-top:2rem;"></div>
+  <blockquote style="font-size:clamp(1rem,2.2vw,1.5rem); margin-top:2rem;">"لو كانت الأهرامات أثراً أدبياً لكانت الشعر الذي لا يحتاج ترجمة"</blockquote>
+  <p class="quote-attr">— نجيب محفوظ</p>
+  <div class="divider" style="margin-top:2rem;"></div>
+  <blockquote style="font-size:clamp(1rem,2.2vw,1.5rem); margin-top:2rem;">"مصر ليست بلداً يعيش في أفريقيا — مصر بلد تعيش أفريقيا فيه"</blockquote>
+  <p class="quote-attr">— نابليون بونابرت</p>
 </div>
 
 <!-- ═══════════════════════════════════════════════
@@ -1117,17 +1847,17 @@ footer p { color: var(--gold-dark); font-size: 0.9rem; margin-bottom: 0.3rem; }
     <p class="section-subtitle reveal">هذا الموقع من تصميم وإعداد أنس غريب ماهر — طالب مدرسة شلشلمون الثانوية بنين، إدارة منيا القمح، محافظة الشرقية.</p>
     <div class="contact-grid">
       <div class="contact-card reveal">
-        <div class="contact-icon">👤</div>
+        <div class="contact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjUwIiBmaWxsPSIjMUEwQTAwIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSIzMiIgcj0iMTgiIGZpbGw9IiNDOUE4NEMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjMyIiByPSIxNCIgZmlsbD0iI0Q0QTgzMCIvPgogIDxjaXJjbGUgY3g9IjQ0IiBjeT0iMzAiIHI9IjQiIGZpbGw9IiMxQTBBMDAiLz4KICA8Y2lyY2xlIGN4PSI1NiIgY3k9IjMwIiByPSI0IiBmaWxsPSIjMUEwQTAwIi8+CiAgPGNpcmNsZSBjeD0iNDUiIGN5PSIyOSIgcj0iMS41IiBmaWxsPSIjQzlBODRDIi8+CiAgPGNpcmNsZSBjeD0iNTciIGN5PSIyOSIgcj0iMS41IiBmaWxsPSIjQzlBODRDIi8+CiAgPHBhdGggZD0iTTQ0LDM3IFE1MCw0MSA1NiwzNyIgc3Ryb2tlPSIjOEI2OTE0IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI3MCIgcng9IjIyIiByeT0iMjQiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuODUiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI2MiIgcng9IjE0IiByeT0iMTAiIGZpbGw9IiNENEE4MzAiLz4KICA8cmVjdCB4PSIzOCIgeT0iMTgiIHdpZHRoPSIyNCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iIzhCNjkxNCIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPg==" alt="المصمم" loading="lazy"></div>
         <div class="contact-label">المصمم</div>
         <div class="contact-value">أنس غريب ماهر</div>
       </div>
       <div class="contact-card reveal reveal-delay-1">
-        <div class="contact-icon">📞</div>
+        <div class="contact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjUwIiBmaWxsPSIjMUEwQTAwIi8+CiAgPGVsbGlwc2UgY3g9IjUwIiBjeT0iNTIiIHJ4PSIyOCIgcnk9IjIwIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjMiLz4KICA8ZWxsaXBzZSBjeD0iNTAiIGN5PSI1MiIgcng9IjIyIiByeT0iMTQiIGZpbGw9IiNDOUE4NEMiIG9wYWNpdHk9IjAuNSIvPgogIDxlbGxpcHNlIGN4PSI1MCIgY3k9IjUyIiByeD0iMTUiIHJ5PSI5IiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjgiLz4KICA8dGV4dCB4PSI1MCIgeT0iNTciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiNGRkQ3MDAiIG9wYWNpdHk9IjAuOTUiPvCTgos8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9IjMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjExIiBmaWxsPSIjQzlBODRDIiBvcGFjaXR5PSIwLjciPtin2YTZgdmFIOKAlCDYtdmI2Kog2LE8L3RleHQ+CiAgPGxpbmUgeDE9IjMwIiB5MT0iNzUiIHgyPSI3MCIgeTI9Ijc1IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjQiLz4KICA8dGV4dCB4PSI1MCIgeT0iODciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iIzhCNjkxNCIgb3BhY2l0eT0iMC43Ij7imKUg2KrZiNin2LXZhCDimKU8L3RleHQ+Cjwvc3ZnPg==" alt="هاتف" loading="lazy"></div>
         <div class="contact-label">تليفون</div>
         <div class="contact-value"><a href="tel:01027309981">01027309981</a></div>
       </div>
       <div class="contact-card reveal reveal-delay-2">
-        <div class="contact-icon">✉️</div>
+        <div class="contact-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjUwIiBmaWxsPSIjMUEwQTAwIi8+CiAgPHJlY3QgeD0iMjAiIHk9IjI4IiB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHJ4PSI0IiBmaWxsPSIjRjVFNkM4IiBvcGFjaXR5PSIwLjkiLz4KICA8cmVjdCB4PSIyMCIgeT0iMjgiIHdpZHRoPSI2MCIgaGVpZ2h0PSI0NCIgcng9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHBhdGggZD0iTTIwLDI4IEw1MCw1MiBMODAsMjgiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CiAgPGxpbmUgeDE9IjIwIiB5MT0iNzIiIHgyPSIzOCIgeTI9IjU0IiBzdHJva2U9IiNDOUE4NEMiIHN0cm9rZS13aWR0aD0iMS41IiBvcGFjaXR5PSIwLjciLz4KICA8bGluZSB4MT0iODAiIHkxPSI3MiIgeDI9IjYyIiB5Mj0iNTQiIHN0cm9rZT0iI0M5QTg0QyIgc3Ryb2tlLXdpZHRoPSIxLjUiIG9wYWNpdHk9IjAuNyIvPgogIDx0ZXh0IHg9IjUwIiB5PSI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSI5IiBmaWxsPSIjOEI0NTEzIiBvcGFjaXR5PSIwLjciPvCTgoDwk4aj4pilPC90ZXh0Pgo8L3N2Zz4=" alt="بريد" loading="lazy"></div>
         <div class="contact-label">البريد الإلكتروني</div>
         <div class="contact-value"><a href="mailto:anasghareeb999@gmail.com">anasghareeb999@gmail.com</a></div>
       </div>
